@@ -1,0 +1,90 @@
+// VARIABLES
+$colors: (blue-light: rgb(5, 194, 201),
+    blue-dark: rgb(73, 165, 202),
+    blue-gray: rgb(38, 50, 56),
+    gray-dark: rgb(27, 36, 47),
+    violet-red: rgb(277, 27, 109));
+
+// $small-screen: 600px !default;
+// $medium-screen: 992px !default;
+// $large-screen: 1200px !default;
+
+// FUNCTIONS
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+// MIXINS
+@mixin for-mobile-only {
+    @media (max-width: 600px) {
+        @content;
+    }
+}
+
+@mixin for-medium-up {
+    @media (min-width: 601px) {
+        @content;
+    }
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #263238;
+
+    .nav-wrapper {
+        margin: 0 5rem;
+
+        @include for-navbar-medium-small {
+            margin: 0 0.1rem;
+        }
+
+        .brand-logo {
+            margin: 0 1rem;
+            font-size: 1.75rem;
+
+            @include for-mobile-only {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            @media (min-width: 601px) and (max-width: 992px) {
+                transform: translateX(0);
+                left: 0;
+            }
+        }
+
+        .nav-sections {
+            li {
+                margin: 0 0.5rem;
+
+                div {
+                    cursor: pointer;
+                    text-transform: uppercase;
+                    padding: 0 0.75rem;
+                    margin-bottom: -3px;
+                }
+            }
+
+            .active {
+                border-bottom: solid 3px color(blue-light);
+            }
+        }
+    }
+}
+
+
+.main-container {
+    max-width: 40rem;
+    margin: auto;
+
+    #intro {
+        div {
+            color: color(blue-dark);
+        }
+    }
+}
