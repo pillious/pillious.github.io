@@ -60,6 +60,7 @@ nav {
         .brand-logo {
             margin: 0 1rem;
             font-size: 1.75rem;
+            cursor: pointer;
 
             @include for-mobile-only {
                 left: 50%;
@@ -74,13 +75,13 @@ nav {
 
         .nav-sections {
             li {
-                margin: 0 0.5rem;
+                padding: 0 0.5rem;
 
-                div {
+                a {
                     cursor: pointer;
                     text-transform: uppercase;
-                    padding: 0 0.75rem;
                     margin-bottom: -3px;
+                    width: 100%;
                 }
             }
 
@@ -90,7 +91,6 @@ nav {
         }
     }
 }
-
 
 .main-container {
     #intro {
@@ -105,6 +105,7 @@ nav {
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
+            background-color: color(gray-dark-overlay);
         }
 
         .intro-statement {
@@ -116,12 +117,7 @@ nav {
             transform: translate(-50%, calc((-100% + #{$nav-height})/2));
             text-align: center;
             white-space: nowrap;
-
-            div {
-                .intro-name {
-                    animation: fadeIn 2s;
-                }
-            }
+            animation: fadeIn 2s;
 
             .to-projects {
                 margin-top: 2rem;
@@ -130,7 +126,7 @@ nav {
                 text-transform: capitalize;
                 font-size: 1.5rem;
                 border-radius: 0;
-                transition: 0.3s ease-in;
+                transition: 0.4s ease-in;
 
                 &:hover {
                     border-color: color(blue-light);
@@ -175,6 +171,27 @@ nav {
                     }
                 }
             }
+        }
+    }
+
+    #about {
+        height: 100vh;
+        margin: 0 10%;
+        padding: 3rem;
+
+        .about-header {
+            font-weight: 700;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .bio-title {
+            font-weight: 600;
+        }
+
+        .bio-text {
+
         }
     }
 }

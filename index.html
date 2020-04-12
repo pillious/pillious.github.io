@@ -21,35 +21,36 @@
 
 <body>
     <!-- NAVBAR -->
-    <nav>
-        <div class="nav-wrapper">
-            <a href="#!" class="brand-logo ">Andrew Lee</a>
-            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons hide-on-med-and-up">menu</i></a>
-            <ul class="right hide-on-small-and-down nav-sections">
-                <li class="active">
-                    <div>Home</div>
-                </li>
-                <li>
-                    <div>About</div>
-                </li>
-                <li>
-                    <div>Projects</div>
-                </li>
-                <li>
-                    <div>Contact</div>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <div class="brand-logo" onclick="scrollToSection('intro')">Andrew Lee</div>
+                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons hide-on-med-and-up">menu</i></a>
+                <ul class="right hide-on-small-and-down nav-sections" id="nav-sections">
+                    <li class="active">
+                        <a href="#intro">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#footer">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 
     <!-- SIDEBAR (on small screens only) -->
     <ul id="slide-out" class="sidenav">
         <li>
             <div class="user-view">
                 <div class="background">
-                    <img src="images/office.jpg" alt="aldf">
+                    <!-- <img src="images/office.jpg"> -->
                 </div>
-                <a href="#user"><img class="circle" src="images/yuna.jpg" alt="aldf"></a>
                 <a href="#name"><span class="white-text name">John Doe</span></a>
                 <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
             </div>
@@ -70,14 +71,19 @@
             <div class="intro-statement">
                 <div>Hello, I'm <span class="intro-name">Andrew Lee.</span></div>
                 <div>I'm a programming enthusiast.</div>
-                <button class="to-projects btn-large">
+                <button class="to-projects btn-large" onclick="scrollToSection('about')">
                     <div>Explore <span class="material-icons">arrow_forward</span></div>
-
                 </button>
             </div>
         </section>
         <!-- ABOUT -->
-        <section id="about"></section>
+        <section id="about">
+            <div class="about-header">About Me</div>
+            <div class="bio-title">Bio Title</div>
+            <div class="bio-body">I'm a junior in highschool who has an intrest in programming. I spend my free time developing various web applications
+                and learning different technologies.</div>
+            <!-- What am I up to now? -->
+        </section>
         <!-- PROJECTS -->
         <section id="projects"></section>
         <!-- FOOTER -->

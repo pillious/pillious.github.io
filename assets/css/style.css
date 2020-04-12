@@ -41,6 +41,7 @@ nav .nav-wrapper {
 nav .nav-wrapper .brand-logo {
   margin: 0 1rem;
   font-size: 1.75rem;
+  cursor: pointer;
 }
 
 @media (max-width: 600px) {
@@ -60,14 +61,14 @@ nav .nav-wrapper .brand-logo {
 }
 
 nav .nav-wrapper .nav-sections li {
-  margin: 0 0.5rem;
+  padding: 0 0.5rem;
 }
 
-nav .nav-wrapper .nav-sections li div {
+nav .nav-wrapper .nav-sections li a {
   cursor: pointer;
   text-transform: uppercase;
-  padding: 0 0.75rem;
   margin-bottom: -3px;
+  width: 100%;
 }
 
 nav .nav-wrapper .nav-sections .active {
@@ -88,6 +89,7 @@ nav .nav-wrapper .nav-sections .active {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  background-color: rgba(27, 36, 47, 0.3);
 }
 
 .main-container #intro .intro-statement {
@@ -100,9 +102,6 @@ nav .nav-wrapper .nav-sections .active {
           transform: translate(-50%, calc((-100% + 64px)/2));
   text-align: center;
   white-space: nowrap;
-}
-
-.main-container #intro .intro-statement div .intro-name {
   -webkit-animation: fadeIn 2s;
           animation: fadeIn 2s;
 }
@@ -114,8 +113,8 @@ nav .nav-wrapper .nav-sections .active {
   text-transform: capitalize;
   font-size: 1.5rem;
   border-radius: 0;
-  -webkit-transition: 0.3s ease-in;
-  transition: 0.3s ease-in;
+  -webkit-transition: 0.4s ease-in;
+  transition: 0.4s ease-in;
 }
 
 .main-container #intro .intro-statement .to-projects:hover {
@@ -163,5 +162,22 @@ nav .nav-wrapper .nav-sections .active {
   .main-container #intro .intro-statement .to-projects span {
     font-size: 1.5rem;
   }
+}
+
+.main-container #about {
+  height: 100vh;
+  margin: 0 10%;
+  padding: 3rem;
+}
+
+.main-container #about .about-header {
+  font-weight: 700;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.main-container #about .bio-title {
+  font-weight: 600;
 }
 /*# sourceMappingURL=style.css.map */
