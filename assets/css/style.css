@@ -1,3 +1,21 @@
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 body {
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
@@ -7,6 +25,7 @@ body {
 
 nav {
   background-color: #263238;
+  height: 64px;
 }
 
 nav .nav-wrapper {
@@ -32,19 +51,11 @@ nav .nav-wrapper .brand-logo {
   }
 }
 
-@media (min-width: 601px) and (max-width: 675px) {
+@media (min-width: 601px) and (max-width: 992px) {
   nav .nav-wrapper .brand-logo {
     -webkit-transform: translateX(0);
             transform: translateX(0);
     left: 0;
-  }
-}
-
-@media (min-width: 676px) and (max-width: 992px) {
-  nav .nav-wrapper .brand-logo {
-    left: 0;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
   }
 }
 
@@ -60,15 +71,97 @@ nav .nav-wrapper .nav-sections li div {
 }
 
 nav .nav-wrapper .nav-sections .active {
-  border-bottom: solid 3px #05c2c9;
+  border-bottom: solid 3px #40c4ff;
 }
 
-.main-container {
-  max-width: 40rem;
-  margin: auto;
+.main-container #intro {
+  width: 100%;
+  height: calc(100vh - 64px);
 }
 
-.main-container #intro div {
-  color: #49a5ca;
+.main-container #intro .background {
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(27, 36, 47, 0.3)), to(rgba(27, 36, 47, 0.3))), url("/assets/img/space.jpg");
+  background-image: linear-gradient(rgba(27, 36, 47, 0.3), rgba(27, 36, 47, 0.3)), url("/assets/img/space.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.main-container #intro .intro-statement {
+  font-size: 2.5rem;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, calc((-100% + 64px)/2));
+          transform: translate(-50%, calc((-100% + 64px)/2));
+  text-align: center;
+  white-space: nowrap;
+}
+
+.main-container #intro .intro-statement div .intro-name {
+  -webkit-animation: fadeIn 2s;
+          animation: fadeIn 2s;
+}
+
+.main-container #intro .intro-statement .to-projects {
+  margin-top: 2rem;
+  background: transparent;
+  border: 2px solid #fff;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  border-radius: 0;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+
+.main-container #intro .intro-statement .to-projects:hover {
+  border-color: #80d8ff;
+  color: #80d8ff;
+}
+
+.main-container #intro .intro-statement .to-projects:before {
+  -webkit-transition: top 0.2s ease-in;
+  transition: top 0.2s ease-in;
+}
+
+.main-container #intro .intro-statement .to-projects:hover span {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.main-container #intro .intro-statement .to-projects span {
+  position: relative;
+  top: 5px;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+@media (max-width: 720px) {
+  .main-container #intro .intro-statement {
+    font-size: 2rem;
+  }
+  .main-container #intro .intro-statement .to-projects {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .main-container #intro .intro-statement {
+    font-size: 1.25rem;
+  }
+  .main-container #intro .intro-statement .to-projects {
+    font-size: 1rem;
+    padding: 0 1rem;
+    margin-top: 1.5rem;
+  }
+  .main-container #intro .intro-statement .to-projects span {
+    font-size: 1.5rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
