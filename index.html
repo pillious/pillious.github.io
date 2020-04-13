@@ -66,7 +66,7 @@
 
     <main class="main-container">
         <!-- INTRO -->
-        <section id="intro">
+        <section id="intro" class="z-depth-1">
             <div class="background"></div>
             <div class="intro-statement">
                 <div>Hello, I'm <span class="intro-name">Andrew Lee.</span></div>
@@ -76,16 +76,91 @@
                 </button>
             </div>
         </section>
-        <!-- ABOUT -->
-        <section id="about">
-            <div class="about-header">About Me</div>
-            <div class="bio-title">Bio Title</div>
-            <div class="bio-body">I'm a junior in highschool who has an intrest in programming. I spend my free time developing various web applications
-                and learning different technologies.</div>
-            <!-- What am I up to now? -->
-        </section>
-        <!-- PROJECTS -->
-        <section id="projects"></section>
+
+        <div class="container">
+            <!-- ABOUT -->
+            <section id="about">
+                <div class="about-header">
+                    <div class="about-title">About Me</div>
+                    <div class="about-underline z-depth-1"></div>
+                </div>
+                <div class="about-main">
+                    <div class="row">
+                        <div class="col s6 about-description">
+                            <div class="bio-wrapper">
+                                <div class="bio-title">Who am I?</div>
+                                <div class="bio-body">I'm a junior in highschool who has an intrest in programming. I spend my free time developing
+                                    various web applications and learning new technologies.</div>
+                            </div>
+                            <div class="current-wrapper">
+                                <div class="current-title">What am I up to now?</div>
+                                <div class="current-body">I'm currently learning SASS and Materialize through my personal website and other small
+                                    projects. I've also dipped my toes in Angular.</div>
+                            </div>
+                        </div>
+                        <div class="col s6 skills-description">
+                            <div class="skills-title">
+                                My Recent Technologies
+                            </div>
+                            <div class="row skills-list-col">
+                                <div class="col s3">
+                                    <div class="skill">
+                                        <img src="assets/img/html5.png">
+                                        <div>HTML</div>
+                                    </div>
+                                </div>
+                                <div class="col s3">
+                                    <div class="skill">
+                                        <img src="assets/img/javascript.png">
+                                        <div>Javascript</div>
+                                    </div>
+                                </div>
+                                <div class="col s3">
+                                    <div class="skill">
+                                        <img src="assets/img/css3.png">
+                                        <div>(S)CSS</div>
+                                    </div>
+                                </div>
+                                <div class="col s3">
+                                    <div class="skill">
+                                        <img src="assets/img/bootstrap.png">
+                                        <div>Bootstrap</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row skills-list-col">
+                                <div class="col s3">
+                                    <div class="skill">
+                                        <img src="assets/img/nodejs.png">
+                                        <div>Node.js</div>
+                                    </div>
+                                </div>
+                                <div class="col s3">
+                                    <div class="skill">
+                                        <img src="assets/img/mongodb.png">
+                                        <div>MongoDB</div>
+                                    </div>
+                                </div>
+                                <div class="col s3">
+                                    <div class="skill">
+                                        <img src="assets/img/heroku.png">
+                                        <div>Heroku</div>
+                                    </div>
+                                </div>
+                                <div class="col s3">
+                                    <div class="skill">
+                                        <img src="assets/img/github.png">
+                                        <div>Github</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- PROJECTS -->
+            <section id="projects"></section>
+        </div>
         <!-- FOOTER -->
         <section id="footer"></section>
     </main>

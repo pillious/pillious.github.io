@@ -21,6 +21,7 @@ body {
   font-weight: 400;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  color: #424242;
 }
 
 nav {
@@ -165,19 +166,171 @@ nav .nav-wrapper .nav-sections .active {
 }
 
 .main-container #about {
-  height: 100vh;
+  height: calc(100vh - 64px);
   margin: 0 10%;
-  padding: 3rem;
+  line-height: 2rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 810px) {
+  .main-container #about {
+    margin: 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .main-container #about {
+    height: 100%;
+    display: block;
+    text-align: center;
+  }
 }
 
 .main-container #about .about-header {
-  font-weight: 700;
-  font-size: 2.2rem;
-  text-transform: uppercase;
-  text-align: center;
+  position: absolute;
+  top: 0;
 }
 
-.main-container #about .bio-title {
+@media (max-width: 550px) {
+  .main-container #about .about-header {
+    position: static;
+    display: inline-block;
+    margin-bottom: 3rem;
+  }
+}
+
+.main-container #about .about-header .about-title {
+  font-weight: 700;
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: 2px;
+  padding-top: 48px;
+}
+
+.main-container #about .about-header .about-underline {
+  height: 3px;
+  width: 20vw;
+  margin: 0.75rem auto 0;
+  background-image: -webkit-gradient(linear, right top, left top, from(#616161), color-stop(40%, #1b242f), color-stop(60%, #1b242f), to(#616161));
+  background-image: linear-gradient(to left, #616161, #1b242f 40%, #1b242f 60%, #616161 100%);
+}
+
+.main-container #about .about-main {
+  font-size: 1.1rem;
+}
+
+.main-container #about .about-main .about-description {
+  padding-right: 1rem;
+}
+
+@media (max-width: 810px) {
+  .main-container #about .about-main .about-description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .main-container #about .about-main .about-description {
+    display: block;
+  }
+}
+
+@media (max-width: 810px) {
+  .main-container #about .about-main .about-description .bio-wrapper {
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .main-container #about .about-main .about-description .bio-wrapper {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+.main-container #about .about-main .about-description .bio-wrapper .bio-title {
   font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.main-container #about .about-main .about-description .current-wrapper {
+  margin-top: 3rem;
+}
+
+@media (max-width: 810px) {
+  .main-container #about .about-main .about-description .current-wrapper {
+    margin: 0;
+    margin-bottom: 3rem;
+  }
+}
+
+.main-container #about .about-main .about-description .current-wrapper .current-title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+}
+
+.main-container #about .about-main .skills-description {
+  padding-left: 1rem;
+}
+
+@media (max-width: 810px) {
+  .main-container #about .about-main .skills-description {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.main-container #about .about-main .skills-description .skills-title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+}
+
+.main-container #about .about-main .skills-description .skills-list-col {
+  padding: 0;
+  text-align: left;
+}
+
+@media (max-width: 550px) {
+  .main-container #about .about-main .skills-description .skills-list-col {
+    font-size: 14px;
+  }
+}
+
+.main-container #about .about-main .skills-description .skills-list-col .skill {
+  text-align: center;
+  display: inline-block;
+  padding-right: 2rem;
+}
+
+.main-container #about .about-main .skills-description .skills-list-col .skill img {
+  max-width: 64px;
+  max-height: 64px;
+  display: inline-block;
+}
+
+@media (max-width: 550px) {
+  .main-container #about .about-main .skills-description .skills-list-col .skill img {
+    max-width: 55px;
+    max-height: 55px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

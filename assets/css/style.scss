@@ -2,6 +2,7 @@
 $colors: (blue-light: rgb(128, 216, 255),
     blue-dark: rgb(64, 196, 255),
     blue-gray: rgb(38, 50, 56),
+    grey-text: rgb(66, 66, 66),
     gray-dark: rgb(27, 36, 47),
     gray-dark-overlay: rgba(27, 36, 47, 0.3),
     violet-red: rgb(277, 27, 109));
@@ -24,17 +25,44 @@ $nav-height: 64px;
     }
 }
 
+@mixin for-medium-only {
+    @media (min-width: 601px) and (max-width: 992px) {
+        @content;
+    }
+}
+
 @mixin for-medium-up {
     @media (min-width: 601px) {
         @content;
     }
 }
 
+// @mixin for-about-section-large {
+//     @media (min-width: 810px) {
+//         @content;
+//     }
+// }
+
+@mixin for-about-section-medium {
+    @media (max-width: 810px) {
+        @content;
+    }
+}
+
+@mixin for-about-section-small {
+    @media (max-width: 550px) {
+        @content;
+    }
+}
+
+
+
 // ANIMATIONS
 @keyframes fadeIn {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -44,6 +72,7 @@ body {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     box-sizing: border-box;
+    color: color(grey-text);
 }
 
 nav {
@@ -175,23 +204,146 @@ nav {
     }
 
     #about {
-        height: 100vh;
+        height: calc(100vh - #{$nav-height});
         margin: 0 10%;
-        padding: 3rem;
+        line-height: 2rem;
+        position: relative;
 
-        .about-header {
-            font-weight: 700;
-            font-size: 2.2rem;
-            text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include for-about-section-medium {
+            margin: 0;
+        }
+
+        @include for-about-section-small {
+            height: 100%;
+            display: block;
             text-align: center;
         }
 
-        .bio-title {
-            font-weight: 600;
+        .about-header {
+            position: absolute;
+            top: 0;
+
+            @include for-about-section-small {
+                position: static;
+                display: inline-block;
+                margin-bottom: 3rem;
+            }
+
+            .about-title {
+                font-weight: 700;
+                font-size: 2.2rem;
+                text-transform: capitalize;
+                text-align: center;
+                letter-spacing: 2px;
+                padding-top: 48px;
+            }
+
+            .about-underline {
+                height: 3px;
+                width: 20vw;
+                margin: 0.75rem auto 0;
+                background-image: linear-gradient(to left, #616161, #{color(gray-dark)} 40%, #{color(gray-dark)} 60%, #616161 100%);
+            }
         }
 
-        .bio-text {
 
+        .about-main {
+            font-size: 1.1rem;
+
+            .about-description {
+                padding-right: 1rem;
+
+                @include for-about-section-medium {
+                    display: flex;
+                    width: 100%;
+                    text-align: center;
+                }
+
+                @include for-about-section-small {
+                    display: block;
+                }
+
+                .bio-wrapper {
+                    @include for-about-section-medium {
+                        margin-right: 1rem;
+                    }
+
+                    @include for-about-section-small {
+                        margin-right: 0;
+                        margin-bottom: 2rem;
+                    }
+
+                    .bio-title {
+                        font-weight: 600;
+                        font-size: 1.5rem;
+                        margin-bottom: 0.5rem;
+                    }
+                }
+
+                .current-wrapper {
+                    margin-top: 3rem;
+
+                    @include for-about-section-medium {
+                        margin: 0;
+                        margin-bottom: 3rem;
+                    }
+
+                    .current-title {
+                        font-weight: 600;
+                        font-size: 1.5rem;
+                        margin-bottom: 0.5rem;
+                        white-space: nowrap;
+                    }
+                }
+            }
+
+            .skills-description {
+                padding-left: 1rem;
+
+                @include for-about-section-medium {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                .skills-title {
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                    margin-bottom: 0.5rem;
+                    white-space: nowrap;
+                }
+
+                .skills-list-col {
+                    padding: 0;
+                    text-align: left;
+
+                    @include for-about-section-small {
+                        font-size: 14px;
+                    }
+
+                    .skill {
+                        text-align: center;
+                        display: inline-block;
+                        padding-right: 2rem;
+
+                        img {
+                            max-width: 64px;
+                            max-height: 64px;
+                            display: inline-block;
+
+                            @include for-about-section-small {
+                                max-width: 55px;
+                                max-height: 55px;
+                            }
+                        }
+                    }
+
+                }
+            }
         }
+
     }
 }
