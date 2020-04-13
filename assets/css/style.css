@@ -29,6 +29,13 @@ nav {
   height: 64px;
 }
 
+@media (max-width: 600px) {
+  nav {
+    width: 100%;
+    background-color: #263238;
+  }
+}
+
 nav .nav-wrapper {
   margin: 0 5rem;
 }
@@ -36,6 +43,12 @@ nav .nav-wrapper {
 @media (min-width: 601px) and (max-width: 675px) {
   nav .nav-wrapper {
     margin: 0 0.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  nav .nav-wrapper {
+    margin: 0 1.5rem;
   }
 }
 
@@ -76,6 +89,34 @@ nav .nav-wrapper .nav-sections li a {
 
 nav .nav-wrapper .nav-sections .active {
   border-bottom: solid 3px #40c4ff;
+}
+
+nav .nav-wrapper .slideup, nav .nav-wrapper .slidedown {
+  max-height: 0;
+  overflow-y: hidden;
+  -webkit-transition: max-height 0.8s ease-in-out;
+  transition: max-height 0.8s ease-in-out;
+}
+
+nav .nav-wrapper .slidedown {
+  max-height: 279px;
+}
+
+@media (max-width: 600px) {
+  nav .nav-wrapper ul {
+    position: absolute;
+    top: 64px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100vw;
+    margin-left: -1.5rem;
+    background-color: #263238;
+  }
 }
 
 .main-container #intro {
@@ -168,7 +209,7 @@ nav .nav-wrapper .nav-sections .active {
 }
 
 .main-container #about {
-  height: calc(100vh - 64px);
+  min-height: calc(100vh - 64px);
   margin: 0 10%;
   line-height: 2rem;
   position: relative;

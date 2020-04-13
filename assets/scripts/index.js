@@ -5,7 +5,8 @@ $(document).ready(function () {
 // Cache selectors
 var lastId,
     topMenu = $("#nav-sections"),
-    topMenuHeight = topMenu.outerHeight() + 1,
+    // 64 is navbar height
+    topMenuHeight = 64 + 1,
     // All list items
     menuItems = topMenu.find("a"),
     // Anchors corresponding to menu items
@@ -56,3 +57,9 @@ function scrollToSection(section) {
             scrollTop: $('#' + section).offset().top - topMenuHeight + 1
     },'slow');
 }
+
+// open and close for collapsed navbar
+$('#nav-dropdown-trigger').click(function (e) {
+    e.preventDefault();
+    $('#nav-sections').toggleClass("slideup slidedown");
+})

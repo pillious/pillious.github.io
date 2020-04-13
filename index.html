@@ -25,8 +25,8 @@
         <nav>
             <div class="nav-wrapper">
                 <a class="brand-logo" onclick="scrollToSection('intro')">Andrew Lee</a>
-                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons hide-on-med-and-up">menu</i></a>
-                <ul class="right hide-on-small-and-down nav-sections" id="nav-sections">
+                <a href="#" data-target="nav-sections" class="nav-dropdown-trigger" id="nav-dropdown-trigger"><i class="material-icons hide-on-med-and-up">menu</i></a>
+                <ul class="right nav-sections nav-dropdown slideup" id="nav-sections">
                     <li class="active">
                         <a href="#intro">Home</a>
                     </li>
@@ -45,11 +45,11 @@
     </div>
 
     <!-- SIDEBAR (on small screens only) -->
-    <ul id="slide-out" class="sidenav">
+    <!-- <ul id="slide-out" class="sidenav">
         <li>
             <div class="user-view">
                 <div class="background">
-                    <!-- <img src="images/office.jpg"> -->
+                    <img src="images/office.jpg">
                 </div>
                 <a href="#name"><span class="white-text name">John Doe</span></a>
                 <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
@@ -62,7 +62,7 @@
         </li>
         <li><a class="subheader">Subheader</a></li>
         <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-    </ul>
+    </ul> -->
 
     <main class="main-container">
         <!-- INTRO -->
@@ -95,7 +95,7 @@
                             <div class="current-wrapper">
                                 <div class="current-title">What am I up to now?</div>
                                 <div class="current-body">I'm currently learning SASS and Materialize through my personal website and other small
-                                    projects. I've also dipped my toes in Angular.</div>
+                                    projects. I've also begun dipped my toes in Angular.</div>
                             </div>
                         </div>
                         <div class="col s6 skills-description">

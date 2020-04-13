@@ -79,11 +79,21 @@ nav {
     background-color: #263238;
     height: $nav-height;
 
+    @include for-mobile-only {
+        width: 100%;
+        background-color: #263238;
+        // height: $nav-height + 215px;
+    }
+
     .nav-wrapper {
         margin: 0 5rem;
 
         @media (min-width: 601px) and (max-width: 675px) {
             margin: 0 0.1rem;
+        }
+
+        @include for-mobile-only {
+            margin: 0 1.5rem;
         }
 
         .brand-logo {
@@ -118,6 +128,27 @@ nav {
 
             .active {
                 border-bottom: solid 3px color(blue-dark);
+            }
+        }
+
+        .slideup, .slidedown {
+            max-height: 0;            
+            overflow-y: hidden;
+            transition: max-height 0.8s ease-in-out;
+        }
+        .slidedown {            
+            max-height: $nav-height + 215px;;                    
+        }  
+
+        @include for-mobile-only {
+            ul {
+                position: absolute;
+                top: $nav-height;
+                display: flex;
+                flex-direction: column;
+                width: 100vw;
+                margin-left: -1.5rem;
+                background-color: #263238;
             }
         }
     }
@@ -206,7 +237,7 @@ nav {
     }
 
     #about {
-        height: calc(100vh - #{$nav-height});
+        min-height: calc(100vh - #{$nav-height});
         margin: 0 10%;
         line-height: 2rem;
         position: relative;
