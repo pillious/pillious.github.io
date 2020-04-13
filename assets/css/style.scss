@@ -89,6 +89,8 @@ nav {
         .brand-logo {
             margin: 0 1rem;
             font-size: 1.75rem;
+            max-height: 64px;
+            overflow: hidden;
             cursor: pointer;
 
             @include for-mobile-only {
