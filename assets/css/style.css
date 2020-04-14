@@ -92,7 +92,8 @@ nav .nav-wrapper .nav-sections .active {
 }
 
 @media (max-width: 600px) {
-  nav .nav-wrapper .slideup, nav .nav-wrapper .slidedown {
+  nav .nav-wrapper .slideup,
+  nav .nav-wrapper .slidedown {
     max-height: 0;
     overflow-y: hidden;
     -webkit-transition: max-height 0.8s ease-in-out;
@@ -213,8 +214,8 @@ nav .nav-wrapper .nav-sections .active {
 }
 
 .main-container #about {
-  min-height: calc(100vh - 64px);
-  margin: 0 10%;
+  min-height: 100vh;
+  padding: 0 10%;
   line-height: 2rem;
   position: relative;
   display: -webkit-box;
@@ -379,5 +380,89 @@ nav .nav-wrapper .nav-sections .active {
     max-width: 55px;
     max-height: 55px;
   }
+}
+
+.main-container #projects {
+  background-color: #fafafa;
+  height: 100vh;
+  padding: 0 10%;
+}
+
+.main-container #projects .projects-header {
+  font-weight: 700;
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: 2px;
+  padding-top: 48px;
+}
+
+.main-container #projects .feature {
+  padding-top: 5rem;
+}
+
+.main-container #projects .feature .feature-project:nth-child(1) .feature-img-wrapper .feature-img {
+  background: url("../img/feature-1.jpg") center center/cover;
+  width: 30vw;
+  height: 20vw;
+}
+
+.main-container #projects .feature .feature-project:nth-child(2) .feature-img-wrapper .feature-img {
+  background: url("../img/feature-2.jpg") center center/cover;
+  width: 30vw;
+  height: 20vw;
+}
+
+.main-container #projects .feature .feature-project:nth-child(3) .feature-img-wrapper .feature-img {
+  background: url("../img/feature-3.jpg") center center/cover;
+  width: 30vw;
+  height: 20vw;
+}
+
+.main-container #projects .feature .feature-project .feature-img-wrapper {
+  display: inline-block;
+  padding-right: 1.5rem;
+}
+
+.main-container #projects .feature .feature-project .feature-img-wrapper .feature-img {
+  position: relative;
+}
+
+.main-container #projects .feature .feature-project .feature-caption {
+  border-left: 5px solid #ff1b6d;
+}
+
+.main-container #projects .feature .feature-project .feature-caption .feature-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 0.75rem 0 0.75rem 0;
+  color: #263238;
+}
+
+.main-container #projects .feature .feature-project .feature-caption .feature-text {
+  font-size: 1.1rem;
+  padding-bottom: 1rem;
+}
+
+.main-container #projects .feature .feature-project .feature-caption .feature-tech {
+  padding-bottom: 2rem;
+  font-weight: 300;
+  font-size: 1.1rem;
+  color: #ce004a;
+}
+
+.main-container #projects .feature .feature-project .feature-caption .feature-tech span {
+  padding-right: 0.5rem;
+}
+
+.main-container #projects .feature .feature-project .feature-caption .feature-btns {
+  padding-bottom: 1rem;
+}
+
+.main-container #projects .feature .feature-project .feature-caption .feature-btns button i {
+  font-size: 1.5rem;
+  color: #fff;
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
 }
 /*# sourceMappingURL=style.css.map */

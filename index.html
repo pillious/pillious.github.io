@@ -11,9 +11,9 @@
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Google fonts - Raleway -->
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Local CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -25,7 +25,8 @@
         <nav>
             <div class="nav-wrapper">
                 <a class="brand-logo" onclick="scrollToSection('intro')">Andrew Lee</a>
-                <a href="#" data-target="nav-sections" class="nav-dropdown-trigger" id="nav-dropdown-trigger"><i class="material-icons hide-on-med-and-up">menu</i></a>
+                <a href="#" data-target="nav-sections" class="nav-dropdown-trigger" id="nav-dropdown-trigger"><i
+                        class="material-icons hide-on-med-and-up">menu</i></a>
                 <ul class="right nav-sections nav-dropdown slideup" id="nav-sections">
                     <li class="active">
                         <a href="#intro">Home</a>
@@ -61,8 +62,8 @@
             <!-- ABOUT -->
             <section id="about">
                 <div class="about-header">
-                    <div class="about-title">About Me</div>
-                    <div class="about-underline z-depth-1"></div>
+                    <div class="about-title">~ About Me ~</div>
+                    <!-- <div class="about-underline z-depth-1"></div> -->
                 </div>
                 <div class="about-main">
                     <div class="row">
@@ -138,9 +139,53 @@
                     </div>
                 </div>
             </section>
-            <!-- PROJECTS -->
-            <section id="projects"></section>
         </div>
+
+        <!-- PROJECTS -->
+        <section id="projects">
+            <div class="container">
+                <div class="projects-header">
+                    <div>~ Projects ~</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-project">
+                        <div class="row">
+                            <div class="feature-img-wrapper col s5">
+                                <img class="feature-img responsive-img">
+                            </div>
+                            <div class="feature-caption col s7">
+                                <div class="feature-title">Lorem.com</div>
+
+                                <div class="feature-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima atque quod optio maiores
+                                    voluptatem? Quis sequi, perspiciatis excepturi quae reprehenderit dolores ex quia ipsum expedita suscipit deleniti
+                                    voluptatem a aut?</div>
+                                <div class="feature-tech">
+                                    <span>Javascript</span>
+                                    <span>HTML</span>
+                                </div>
+                                <div class="feature-btns">
+                                    <button class="btn waves-effect wave-light" onclick='window.open("https://materializecss.com/buttons.html", "_blank");'><i class="fa fa-github"></i> Github</button>
+                                    <button class="btn waves-effect wave-light" onclick='window.open("http://findmatthew.com/", "_blank");'><i class="fa fa-link"></i> View Site</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-project">
+                        <div class="feature-img-wrapper">
+                            <img class="feature-img responsive-img">
+                        </div>
+                        <div class="feature-caption">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima atque quod optio maiores
+                            voluptatem? Quis sequi, perspiciatis excepturi quae reprehenderit dolores ex quia ipsum expedita suscipit deleniti
+                            voluptatem a aut?
+                        </div>
+                    </div>
+                </div>
+                <div class="archive">
+
+                </div>
+            </div>
+        </section>
         <!-- FOOTER -->
         <section id="footer"></section>
     </main>
