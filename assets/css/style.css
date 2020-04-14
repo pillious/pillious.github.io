@@ -91,15 +91,19 @@ nav .nav-wrapper .nav-sections .active {
   border-bottom: solid 3px #40c4ff;
 }
 
-nav .nav-wrapper .slideup, nav .nav-wrapper .slidedown {
-  max-height: 0;
-  overflow-y: hidden;
-  -webkit-transition: max-height 0.8s ease-in-out;
-  transition: max-height 0.8s ease-in-out;
+@media (max-width: 600px) {
+  nav .nav-wrapper .slideup, nav .nav-wrapper .slidedown {
+    max-height: 0;
+    overflow-y: hidden;
+    -webkit-transition: max-height 0.8s ease-in-out;
+    transition: max-height 0.8s ease-in-out;
+  }
 }
 
-nav .nav-wrapper .slidedown {
-  max-height: 279px;
+@media (max-width: 600px) {
+  nav .nav-wrapper .slidedown {
+    max-height: 279px;
+  }
 }
 
 @media (max-width: 600px) {

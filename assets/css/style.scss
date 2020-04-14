@@ -132,12 +132,17 @@ nav {
         }
 
         .slideup, .slidedown {
-            max-height: 0;            
-            overflow-y: hidden;
-            transition: max-height 0.8s ease-in-out;
+            @include for-mobile-only {
+                max-height: 0;            
+                overflow-y: hidden;
+                transition: max-height 0.8s ease-in-out;
+            }
         }
-        .slidedown {            
-            max-height: $nav-height + 215px;;                    
+
+        .slidedown {   
+            @include for-mobile-only {
+                max-height: $nav-height + 215px;    
+            }         
         }  
 
         @include for-mobile-only {
