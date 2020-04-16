@@ -1,7 +1,4 @@
-$(document).ready(function () {
-    $('.sidenav').sidenav();
-});
-
+// Smoothly scroll between sections & update navbar with active section
 // Cache selectors
 var lastId,
     topMenu = $("#nav-sections"),
@@ -51,6 +48,7 @@ $(window).scroll(function () {
     }
 });
 
+// smooth scroll to different sections
 function scrollToSection(section) {
     // use +1px to update the active section in navbar
     $('html,body').animate({
@@ -58,7 +56,7 @@ function scrollToSection(section) {
     },'slow');
 }
 
-// open and close for collapsed navbar
+// open and close for collapsed navbar (mobile)
 $('#nav-dropdown-trigger').click(function (e) {
     e.preventDefault();
     $('#nav-sections').toggleClass("slideup slidedown");

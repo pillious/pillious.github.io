@@ -410,14 +410,13 @@ nav {
 
             .feature-project {
                 height: 33vh;
-                padding-bottom: 10rem;
 
                 .row {
                     height: 100%;
 
                     .feature-img-wrapper {
-                        width: 25vw;
-                        height: 20vw;
+                        width: 33%;
+                        height: 70%;
                         display: inline-block;
                         padding-right: 1.5rem;
 
@@ -457,7 +456,7 @@ nav {
                                         opacity: 1;
 
                                     }
-                                    
+
                                     .feature-center {
                                         height: 100%;
                                         display: flex;
@@ -471,25 +470,23 @@ nav {
                                             padding-bottom: 0.75rem;
                                             color: color(blue-gray);
                                         }
-                
+
                                         .feature-text {
                                             font-size: 1.1rem;
                                             padding-bottom: 1rem;
                                         }
-                
+
                                         .feature-short-desc {
                                             padding-bottom: 2rem;
-                                            font-weight: 300;
                                             font-size: 1.1rem;
-                                            color: darken(color(violet-red), 15%);
-                
+                                            color: color(violet-red);
+
                                             span {
                                                 padding-right: 0.5rem;
                                             }
                                         }
-                
+
                                         .feature-btn {
-                
                                             button {
                                                 i {
                                                     font-size: 1.5rem;
@@ -503,51 +500,79 @@ nav {
                             }
                         }
                     }
-
-                    // .feature-caption {
-                    //     height: 100%;
-                    //     border-left: 5px solid color(violet-red);
-
-                    //     .feature-title {
-                    //         font-size: 1.4rem;
-                    //         font-weight: 700;
-                    //         padding: 0.75rem 0 0.75rem 0;
-                    //         color: color(blue-gray);
-                    //     }
-
-                    //     .feature-text {
-                    //         font-size: 1.1rem;
-                    //         padding-bottom: 1rem;
-                    //     }
-
-                    //     .feature-tech {
-                    //         padding-bottom: 2rem;
-                    //         font-weight: 300;
-                    //         font-size: 1.1rem;
-                    //         color: darken(color(violet-red), 15%);
-
-                    //         span {
-                    //             padding-right: 0.5rem;
-                    //         }
-                    //     }
-
-                    //     .feature-btns {
-                    //         padding-bottom: 1rem;
-
-                    //         button {
-                    //             i {
-                    //                 font-size: 1.5rem;
-                    //                 color: #fff;
-                    //                 transform: translateY(3px);
-                    //             }
-                    //         }
-                    //     }
-                    // }
                 }
 
             }
 
         }
 
+    }
+}
+
+.modal {
+    width: 30%;
+    max-height: 100%;
+
+    .modal-content {
+        padding: 0;
+
+        .modal-img-wrapper {
+            .modal-img {
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+        }
+
+        .modal-caption {
+            height: 100%;
+            padding: 0 24px;
+
+            .modal-title {
+                font-size: 1.4rem;
+                font-weight: 700;
+                padding: 0.75rem 0 0.75rem 0;
+                color: color(blue-gray);
+            }
+
+            .modal-desc {
+                font-size: 1.1rem;
+                padding-bottom: 1rem;
+            }
+
+            .modal-tech {
+                padding-bottom: 2rem;
+                font-weight: 300;
+                font-size: 1.1rem;
+                color: darken(color(violet-red), 15%);
+
+                span {
+                    padding-right: 0.5rem;
+                }
+            }
+
+            .modal-btns {
+                padding-bottom: 1rem;
+
+                button {
+                    i {
+                        font-size: 1.5rem;
+                        color: #fff;
+                        transform: translateY(3px);
+                    }
+                }
+            }
+        }
+    }
+
+    .modal-footer {
+        .modal-close {
+            color: lighten(color(gray-dark), 20%);
+        }
+
+        .fa-times {
+            font-size: 2rem;
+        }
     }
 }

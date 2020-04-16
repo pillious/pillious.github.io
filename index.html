@@ -150,7 +150,7 @@
                 <div class="feature">
                     <div class="feature-project">
                         <div class="row">
-                            <div class="feature-img-wrapper col s6">
+                            <div class="feature-img-wrapper">
                                 <div class="feature-img-container">
                                     <img class="feature-img responsive-img">
                                     <div class="overlay">
@@ -159,45 +159,66 @@
                                                 <div class="feature-title">Lorem.com</div>
                                                 <div class="feature-short-desc">It is Lorem</div>
                                                 <div class="feature-btn">
-                                                    <button class="btn waves-effect wave-light"
-                                                        onclick='window.open("https://brittanychiang.com/", "_blank");'>More Info</button>
+                                                    <button class="btn waves-effect wave-light" onclick="displayModal(0)">More
+                                                        Info</button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
-                                <!-- <div class="feature-caption col s6">
-                                    <div class="feature-title">Lorem.com</div>
-
-                                    <div class="feature-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima atque quod optio
-                                        maiores
-                                        voluptatem? Quis sequi, perspiciatis excepturi quae reprehenderit dolores ex quia ipsum expedita suscipit
-                                        deleniti
-                                        voluptatem a aut?</div>
-                                    <div class="feature-tech">
-                                        <span>Javascript</span>
-                                        <span>HTML</span>
+                            </div>
+                            <div class="feature-img-wrapper">
+                                <div class="feature-img-container">
+                                    <img class="feature-img responsive-img">
+                                    <div class="overlay">
+                                        <div class="feature-caption">
+                                            <div class="feature-center">
+                                                <div class="feature-title">Lorem.com</div>
+                                                <div class="feature-short-desc">It is Lorem</div>
+                                                <div class="feature-btn">
+                                                    <button class="btn waves-effect wave-light " onclick="displayModal(1)">More
+                                                        Info</button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="feature-btns">
-                                        <button class="btn waves-effect wave-light" onclick='window.open("https://brittanychiang.com/", "_blank");'><i
-                                                class="fa fa-github"></i> Github</button>
-                                        <button class="btn waves-effect wave-light" onclick='window.open("http://findmatthew.com/", "_blank");'><i
-                                                class="fa fa-link"></i> View Site</button>
+                                </div>
+                            </div>
+                            <div class="feature-img-wrapper">
+                                <div class="feature-img-container">
+                                    <img class="feature-img responsive-img">
+                                    <div class="overlay">
+                                        <div class="feature-caption">
+                                            <div class="feature-center">
+                                                <div class="feature-title">Lorem.com</div>
+                                                <div class="feature-short-desc">It is Lorem</div>
+                                                <div class="feature-btn">
+                                                    <button class="btn waves-effect wave-light " onclick="displayModal(2)">More
+                                                        Info</button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div> -->
+                                </div>
+                            </div>
+                            <div class="feature-img-wrapper">
+                                <div class="feature-img-container">
+                                    <img class="feature-img responsive-img">
+                                    <div class="overlay">
+                                        <div class="feature-caption">
+                                            <div class="feature-center">
+                                                <div class="feature-title">Lorem.com</div>
+                                                <div class="feature-short-desc">It is Lorem</div>
+                                                <div class="feature-btn">
+                                                    <button class="btn waves-effect wave-light " onclick="displayModal(0)">More
+                                                        Info</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <!-- <div class="feature-project">
-                            <div class="feature-img-wrapper">
-                                <img class="feature-img responsive-img">
-                            </div>
-                            <div class="feature-caption">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima atque quod optio maiores
-                                voluptatem? Quis sequi, perspiciatis excepturi quae reprehenderit dolores ex quia ipsum expedita suscipit deleniti
-                                voluptatem a aut?
-                            </div>
-                        </div> -->
                     </div>
                     <div class="archive">
 
@@ -208,6 +229,29 @@
         <section id="footer"></section>
     </main>
 
+    <!-- Modal Structure -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-img-wrapper">
+                <img class="modal-img responsive-img" id="modal-img">
+            </div>
+            <div class="modal-caption">
+                <div class="modal-title" id="modal-title"></div>
+                <div class="modal-desc" id="modal-desc"></div>
+                <div class="modal-tech" id="modal-tech"></div>
+                <div class="moadl-btns">
+                    <button class="btn waves-effect wave-light" id="modal-github"><i
+                            class="fa fa-github"></i> Github</button>
+                    <button class="btn waves-effect wave-light" id="modal-site"><i
+                            class="fa fa-link"></i> View Site</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a class="modal-close waves-effect waves-green btn-flat close-modal"><i class="fa fa-times"></i></a>
+        </div>
+    </div>
+
     <!-- Jquery (Must import Jquery before Materialize) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
     <!-- Materialize JavaScript -->
@@ -215,6 +259,7 @@
 
     <!-- Local Javscript -->
     <script src="assets/scripts/index.js"></script>
+    <script src="assets/scripts/modals.js"></script>
 </body>
 
 </html>
