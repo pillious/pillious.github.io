@@ -50,9 +50,9 @@
         <section id="intro" class="z-depth-1">
             <div class="background"></div>
             <div class="intro-statement">
-                <div>Hello, I'm <span class="intro-name">Andrew Lee.</span></div>
-                <div>I'm a programming enthusiast.</div>
-                <button class="to-projects btn-large" onclick="scrollToSection('about')">
+                <div class="animate" data-animate="slideFromTop 0.9s ease-out">Hello, I'm <span class="intro-name">Andrew Lee.</span></div>
+                <div class="animate" data-animate="slideFromTop 0.85s ease-out">I'm a programming enthusiast.</div>
+                <button class="to-projects btn-large animate" data-animate="slideFromTop 0.7s ease-out" onclick="scrollToSection('about')">
                     <div>Explore <span class="material-icons">arrow_forward</span></div>
                 </button>
             </div>
@@ -61,13 +61,12 @@
         <div class="container">
             <!-- ABOUT -->
             <section id="about">
-                <div class="about-header">
+                <div class="about-header animate" data-animate="slideFromRight 1s ease-out">
                     <div class="about-title">~ About Me ~</div>
-                    <!-- <div class="about-underline z-depth-1"></div> -->
                 </div>
                 <div class="about-main">
                     <div class="row">
-                        <div class="col s6 about-description">
+                        <div class="col s6 about-description animate" data-animate="slideFromLeft 1s ease-out">
                             <div class="bio-wrapper">
                                 <div class="bio-title">Who am I?</div>
                                 <div class="bio-body">I'm a junior in highschool who has an intrest in programming. I spend my free time developing
@@ -79,9 +78,9 @@
                                     projects. I've also begun dipped my toes in Angular.</div>
                             </div>
                         </div>
-                        <div class="col s6 skills-description">
+                        <div class="col s6 skills-description animate" data-animate="slideFromRight 1s ease-out">
                             <div class="skills-title">
-                                My Recent Technologies
+                                Recent Technologies
                             </div>
                             <div class="row skills-list-col">
                                 <div class="col s3">
@@ -144,13 +143,13 @@
         <!-- PROJECTS -->
         <section id="projects">
             <div class="container">
-                <div class="projects-header">
+                <div class="projects-header animate" data-animate="slideFromLeft 1s ease-out">
                     <div>~ Projects ~</div>
                 </div>
                 <div class="feature">
                     <div class="feature-project">
-                        <div class="row">
-                            <div class="feature-img-wrapper">
+                        <div class="project-row">
+                            <div class="feature-img-wrapper animate" data-animate="slideFromBottom 0.5s">
                                 <div class="feature-img-container">
                                     <img class="feature-img responsive-img">
                                     <div class="overlay">
@@ -167,7 +166,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="feature-img-wrapper">
+                            <div class="feature-img-wrapper animate" data-animate="slideFromBottom 0.5s">
                                 <div class="feature-img-container">
                                     <img class="feature-img responsive-img">
                                     <div class="overlay">
@@ -184,7 +183,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="feature-img-wrapper">
+                            <div class="feature-img-wrapper animate" data-animate="slideFromBottom 0.5s">
                                 <div class="feature-img-container">
                                     <img class="feature-img responsive-img">
                                     <div class="overlay">
@@ -201,7 +200,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="feature-img-wrapper">
+                            <div class="feature-img-wrapper animate" data-animate="slideFromBottom 0.5s">
                                 <div class="feature-img-container">
                                     <img class="feature-img responsive-img">
                                     <div class="overlay">
@@ -254,12 +253,16 @@
 
     <!-- Jquery (Must import Jquery before Materialize) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <!-- Jquery Waypoints -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <!-- Materialize JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
 
     <!-- Local Javscript -->
     <script src="assets/scripts/index.js"></script>
     <script src="assets/scripts/modals.js"></script>
+    <script src="assets/scripts/animations.js"></script>
 </body>
 
 </html>

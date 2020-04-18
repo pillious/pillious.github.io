@@ -38,6 +38,12 @@ $nav-height: 64px;
     }
 }
 
+@mixin for-large-up {
+    @media (max-width: 1201px) {
+        @content;
+    }
+}
+
 @mixin for-about-section-medium {
     @media (max-width: 810px) {
         @content;
@@ -45,12 +51,10 @@ $nav-height: 64px;
 }
 
 @mixin for-about-section-small {
-    @media (max-width: 550px) {
+    @media (max-width: 730px) {
         @content;
     }
 }
-
-
 
 // ANIMATIONS
 @keyframes fadeIn {
@@ -59,6 +63,54 @@ $nav-height: 64px;
     }
 
     100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-275px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        transform: translateX(275px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromTop {
+    0% {
+        transform: translateY(-275px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromBottom {
+    0% {
+        transform: translateY(275px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
         opacity: 1;
     }
 }
@@ -77,7 +129,6 @@ nav {
     @include for-mobile-only {
         width: 100%;
         background-color: #263238;
-        // height: $nav-height + 215px;
     }
 
     .nav-wrapper {
@@ -159,6 +210,7 @@ nav {
     #intro {
         width: 100%;
         height: calc(100vh - #{$nav-height});
+        height: calc((var(--vh, 1vh) * 100));
 
         .background {
             width: 100%;
@@ -180,7 +232,6 @@ nav {
             transform: translate(-50%, calc((-100% + #{$nav-height})/2));
             text-align: center;
             white-space: nowrap;
-            animation: fadeIn 2s;
 
             .to-projects {
                 margin-top: 2rem;
@@ -260,6 +311,7 @@ nav {
         .about-header {
             position: absolute;
             top: 0;
+            opacity: 0;
 
             @include for-about-section-small {
                 position: static;
@@ -275,13 +327,6 @@ nav {
                 letter-spacing: 2px;
                 padding-top: 48px;
             }
-
-            // .about-underline {
-            //     height: 3px;
-            //     width: 20vw;
-            //     margin: 0.75rem auto 0;
-            //     background-image: linear-gradient(to left, #616161, #{color(gray-dark)} 40%, #{color(gray-dark)} 60%, #616161 100%);
-            // }
         }
 
 
@@ -290,6 +335,7 @@ nav {
 
             .about-description {
                 padding-right: 1rem;
+                opacity: 0;
 
                 @include for-about-section-medium {
                     display: flex;
@@ -337,10 +383,12 @@ nav {
 
             .skills-description {
                 padding-left: 1rem;
+                opacity: 0;
 
                 @include for-about-section-medium {
                     width: 100%;
                     text-align: center;
+                    padding: 0;
                 }
 
                 .skills-title {
@@ -355,26 +403,35 @@ nav {
                     text-align: left;
 
                     @include for-about-section-small {
-                        font-size: 14px;
+                        font-size: 12.5px;
+                        padding: 0 1rem;
+                        
                     }
 
-                    .skill {
-                        text-align: center;
-                        display: inline-block;
-                        padding-right: 2rem;
+                    @media (min-width: 475px) and (max-width: 811px) {
+                        margin-left: 2rem;
+                    }
 
-                        img {
-                            max-width: 64px;
-                            max-height: 64px;
+                    .col {
+                        padding: 0;
+
+                        .skill {
+                            text-align: center;
                             display: inline-block;
-
-                            @include for-about-section-small {
-                                max-width: 55px;
-                                max-height: 55px;
+                            padding-right: 2rem;
+    
+                            img {
+                                max-width: 64px;
+                                max-height: 64px;
+                                display: inline-block;
+    
+                                @include for-about-section-small {
+                                    max-width: 50px;
+                                    max-height: 50px;
+                                }
                             }
                         }
                     }
-
                 }
             }
         }
@@ -384,7 +441,16 @@ nav {
     #projects {
         background-color: color(grey-background);
         height: 100vh;
+        min-height: 1005;
         padding: 0 10%;
+
+        @media (min-width: 751px) and (max-width: 1380px) {
+            height: 710px;
+        }
+
+        @media (max-width: 750px) {
+            height: 1000px;
+        }
 
         .projects-header {
             font-weight: 700;
@@ -393,6 +459,7 @@ nav {
             text-align: center;
             letter-spacing: 2px;
             padding-top: 48px;
+            opacity: 0;
         }
 
         .feature {
@@ -400,9 +467,11 @@ nav {
 
             @for $i from 1 through 3 {
                 .feature-project {
-                    &:nth-child(#{$i}) {
-                        .feature-img {
-                            background: url('../img/feature-#{$i}.jpg') center center/cover;
+                    .project-row {
+                        &:nth-child(#{$i}) {
+                            .feature-img {
+                                background: url('../img/feature-#{$i}.jpg') center center/cover;
+                            }
                         }
                     }
                 }
@@ -411,14 +480,52 @@ nav {
             .feature-project {
                 height: 33vh;
 
-                .row {
+                .project-row {
                     height: 100%;
 
                     .feature-img-wrapper {
                         width: 33%;
-                        height: 70%;
+                        height: 80%;
                         display: inline-block;
-                        padding-right: 1.5rem;
+                        padding-bottom: 1.5rem;
+                        opacity: 0;
+
+                        @media (min-width: 1381px) {
+                            &:nth-child(3n+2) {
+                                padding: 0 0.75rem 1.5rem 0.75rem;
+                            }
+    
+                            &:nth-child(3n+1) {
+                                padding-right: 0.75rem;
+                            }
+    
+                            &:nth-child(3n+3) {
+                                padding-left: 0.75rem;
+                            }
+                        }
+
+                        @media (min-width: 751px) and (max-width: 1380px) {
+                            width: 49%;
+
+                            &:nth-child(2n+1) {
+                                padding-right: 0.75rem;
+                            }
+
+                            &:nth-child(2n+2) {
+                                padding-left: 0.75rem;
+                            }
+                        }
+
+                        @media (max-width: 750px) {
+                            width: 100%;
+                            height: 90%;
+
+                            padding: 0 5rem;
+                        }
+
+                        @media(max-width: 575px) {
+                            padding: 0;
+                        }
 
                         .feature-img-container {
                             position: relative;
@@ -438,12 +545,19 @@ nav {
                                 top: 0;
                                 height: 100%;
                                 width: 100%;
-                                transition: 0.8s;
+                                transition: all 0.75s;
 
                                 &:hover {
                                     background-color: rgba(color(grey-background), 0.75);
                                     opacity: 1;
 
+                                    .feature-caption {
+                                        opacity: 1;
+
+                                        button {
+                                            visibility: visible !important;
+                                        }
+                                    }
                                 }
 
                                 .feature-caption {
@@ -452,10 +566,13 @@ nav {
                                     height: 100%;
                                     transition: 0.8s;
 
-                                    &:hover {
-                                        opacity: 1;
+                                    // &:hover {
+                                    //     opacity: 1;
 
-                                    }
+                                    //     .btn {
+                                    //         display: inline-block;
+                                    //     }
+                                    // }
 
                                     .feature-center {
                                         height: 100%;
@@ -488,6 +605,8 @@ nav {
 
                                         .feature-btn {
                                             button {
+                                                visibility: hidden;
+
                                                 i {
                                                     font-size: 1.5rem;
                                                     color: #fff;
@@ -512,6 +631,19 @@ nav {
 .modal {
     width: 30%;
     max-height: 100%;
+
+    @media (max-width: 1450px) {
+        width: 50%;
+    }
+
+    @media (max-width: 850px) {
+        width: 75%;
+    }
+
+    @media (max-width: 500px) {
+        width: 98%;
+        transform: translateY(-53px) !important;
+    }
 
     .modal-content {
         padding: 0;
