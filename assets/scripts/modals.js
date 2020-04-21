@@ -52,7 +52,7 @@ function fillModal(projectNum) {
     if (projectInfo.github != '') {
         $("#modal-github").show();
         $("#modal-github").on("click", () => {
-            window.open(projectInfo.github, '_blank');
+            window.open(projectInfo.github);
         });
     }
     else {
@@ -62,7 +62,7 @@ function fillModal(projectNum) {
     if (projectInfo.site != '') {
         $("#modal-site").show();
         $("#modal-site").on("click", () => {
-            window.open(projectInfo.site, '_blank');
+            window.open(projectInfo.site);
         });
     }
     else {

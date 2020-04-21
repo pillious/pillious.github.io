@@ -500,7 +500,7 @@ nav {
                     .project-row {
                         &:nth-child(#{$i}) {
                             .feature-img {
-                                background: url('../img/feature-#{$i}.jpg') center center/cover;
+                                background: url('../img/projects/feature-#{$i}.jpg') center center/cover;
                             }
                         }
                     }

@@ -575,15 +575,15 @@ nav .nav-wrapper .nav-sections .active {
 }
 
 .main-container #projects .feature .feature-project .project-row:nth-child(1) .feature-img {
-  background: url("../img/feature-1.jpg") center center/cover;
+  background: url("../img/projects/feature-1.jpg") center center/cover;
 }
 
 .main-container #projects .feature .feature-project .project-row:nth-child(2) .feature-img {
-  background: url("../img/feature-2.jpg") center center/cover;
+  background: url("../img/projects/feature-2.jpg") center center/cover;
 }
 
 .main-container #projects .feature .feature-project .project-row:nth-child(3) .feature-img {
-  background: url("../img/feature-3.jpg") center center/cover;
+  background: url("../img/projects/feature-3.jpg") center center/cover;
 }
 
 .main-container #projects .feature .feature-project {
