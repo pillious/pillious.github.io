@@ -1,12 +1,13 @@
 // VARIABLES
-$colors: (blue-light: rgb(128, 216, 255),
+$colors: (
     blue-dark: rgb(64, 196, 255),
     blue-gray: rgb(38, 50, 56),
     grey-text: rgb(66, 66, 66),
     grey-background: rgb(250, 250, 250),
     gray-dark: rgb(27, 36, 47),
     gray-dark-overlay: rgba(27, 36, 47, 0.3),
-    violet-red: rgb(277, 27, 109));
+    violet-red: rgb(277, 27, 109)
+);
 
 $nav-height: 64px;
 
@@ -256,15 +257,15 @@ nav {
             .to-projects {
                 margin-top: 2rem;
                 background: transparent;
-                border: 2px solid #fff;
+                border: 1px solid #fff;
                 text-transform: capitalize;
                 font-size: 1.5rem;
                 border-radius: 0;
                 transition: 0.4s ease-in;
 
                 &:hover {
-                    border-color: color(blue-light);
-                    color: color(blue-light);
+                    border-color: #64ffda;
+                    color: #64ffda;
                 }
 
                 &:before {
@@ -594,14 +595,6 @@ nav {
                                     position: static;
                                     height: 100%;
                                     transition: 0.8s;
-
-                                    // &:hover {
-                                    //     opacity: 1;
-
-                                    //     .btn {
-                                    //         display: inline-block;
-                                    //     }
-                                    // }
 
                                     .feature-center {
                                         height: 100%;

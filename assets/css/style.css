@@ -303,7 +303,7 @@ nav .nav-wrapper .nav-sections .active {
 .main-container #intro .intro-statement .to-projects {
   margin-top: 2rem;
   background: transparent;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   text-transform: capitalize;
   font-size: 1.5rem;
   border-radius: 0;
@@ -312,8 +312,8 @@ nav .nav-wrapper .nav-sections .active {
 }
 
 .main-container #intro .intro-statement .to-projects:hover {
-  border-color: #80d8ff;
-  color: #80d8ff;
+  border-color: #64ffda;
+  color: #64ffda;
 }
 
 .main-container #intro .intro-statement .to-projects:before {
