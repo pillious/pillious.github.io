@@ -12,7 +12,7 @@ $(document).ready(function() {
                 'animation': elem.data('animate'),
                 opacity: 1
             });
-        }, { triggerOnce: true, offset: offset})
+        }, { triggerOnce: true, offset: elem.data('offset') ? elem.data('offset') : offset})
 
     } );
 })

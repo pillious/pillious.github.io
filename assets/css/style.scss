@@ -115,6 +115,26 @@ $nav-height: 64px;
     }
 }
 
+@keyframes scaleIn {
+    0% {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    70% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 body {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
@@ -441,15 +461,23 @@ nav {
     #projects {
         background-color: color(grey-background);
         height: 100vh;
-        min-height: 1005;
+        min-height: 100vh;
         padding: 0 10%;
 
         @media (min-width: 751px) and (max-width: 1380px) {
             height: 710px;
+
+            .feature {
+                height: 710px;
+            }
         }
 
         @media (max-width: 750px) {
-            height: 1000px;
+            height: 1500px;
+
+            .feature {
+                height: 1500px;
+            }
         }
 
         .projects-header {
@@ -464,6 +492,7 @@ nav {
 
         .feature {
             padding-top: 5rem;
+            height: 600px;
 
             @for $i from 1 through 3 {
                 .feature-project {
@@ -625,6 +654,111 @@ nav {
 
         }
 
+    }
+
+    #footer {
+        height: calc(100vh - #{$nav-height});
+        color: darken(#fff, 10%);
+
+        .contact {
+            height: 75%;
+            background-color: darken(#263238, 3%);
+
+                .contact-header {
+                    font-weight: 700;
+                    font-size: 2.2rem;
+                    text-transform: capitalize;
+                    text-align: center;
+                    letter-spacing: 2px;
+                    padding-top: 48px;
+                    overflow: hidden;
+                } 
+
+                .container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    height: calc(100% - 97px);
+                    padding-bottom: 6rem;
+
+                    .contact-caption {
+                        font-size: 1.3rem;
+                        line-height: 2rem;
+                        text-align: center;
+                        color: darken(#fff, 30%);
+                    }
+    
+                    .contact-email {
+                        display: block;
+                        text-align: center;
+                        padding-top: 6rem;
+
+                        a {
+                            color: #64ffda;
+                            background-color: transparent;
+                            border: 1px solid #64ffda;
+                            opacity: 0;
+
+                            &:hover {
+                                background-color: rgba(lighten(#202a2f, 20%), .5); 
+                            }
+
+                            &:focus {
+                                background-color: rgba(lighten(#202a2f, 10%), .5); 
+                            }
+                        }
+                    }
+                }
+
+        }
+
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 25%;
+            background-color: darken(#263238, 4%);
+
+            .footer-icons {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                height: 80%;
+
+                a {
+                    color: darken(#fff, 10%);
+                    margin: 0.5rem;
+                    transition: all 0.2s;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    &:hover {
+                        color: #64ffda;
+                        transform: translateY(-2px);
+                    }
+
+                    i {
+                        font-size: 2rem;
+                        padding: 3px;
+                    }
+                }
+
+            }
+
+            .footer-copyright {
+                height: 20%;
+                color: darken(#fff, 50%);
+            }
+        }
     }
 }
 
