@@ -687,6 +687,10 @@ nav {
                         text-align: center;
                         padding-top: 6rem;
 
+                        @media (max-height: 650px) {
+                            padding-top: 2rem;
+                        }
+
                         a {
                             color: #64ffda;
                             background-color: transparent;

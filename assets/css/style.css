@@ -785,6 +785,12 @@ nav .nav-wrapper .nav-sections .active {
   padding-top: 6rem;
 }
 
+@media (max-height: 650px) {
+  .main-container #footer .contact .container .contact-email {
+    padding-top: 2rem;
+  }
+}
+
 .main-container #footer .contact .container .contact-email a {
   color: #64ffda;
   background-color: transparent;
