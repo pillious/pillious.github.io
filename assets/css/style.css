@@ -285,7 +285,7 @@ nav .nav-wrapper .nav-sections .active {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: rgba(27, 36, 47, 0.3);
+  background-color: #1e272c;
 }
 
 .main-container #intro .intro-statement {
