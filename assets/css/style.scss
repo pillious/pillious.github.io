@@ -665,6 +665,7 @@ nav {
                     letter-spacing: 2px;
                     padding-top: 48px;
                     overflow: hidden;
+                    opacity: 0;
                 } 
 
                 .container {
@@ -680,6 +681,7 @@ nav {
                         line-height: 2rem;
                         text-align: center;
                         color: darken(#fff, 30%);
+                        opacity: 0;
                     }
     
                     .contact-email {

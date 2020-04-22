@@ -752,6 +752,7 @@ nav .nav-wrapper .nav-sections .active {
   letter-spacing: 2px;
   padding-top: 48px;
   overflow: hidden;
+  opacity: 0;
 }
 
 .main-container #footer .contact .container {
@@ -777,6 +778,7 @@ nav .nav-wrapper .nav-sections .active {
   line-height: 2rem;
   text-align: center;
   color: #b3b3b3;
+  opacity: 0;
 }
 
 .main-container #footer .contact .container .contact-email {
