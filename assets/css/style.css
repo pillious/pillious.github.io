@@ -542,19 +542,34 @@ nav .nav-wrapper .nav-sections .active {
 
 @media (min-width: 751px) and (max-width: 1380px) {
   .main-container #projects {
-    height: 710px;
+    height: 750px;
   }
   .main-container #projects .feature {
-    height: 710px;
+    height: 750px;
   }
 }
 
 @media (max-width: 750px) {
   .main-container #projects {
-    height: 1500px;
+    height: 2000px;
   }
   .main-container #projects .feature {
-    height: 1500px;
+    height: 2000px;
+  }
+}
+
+@media (max-height: 675px) and (max-width: 750px) {
+  .main-container #projects {
+    height: 1600px;
+  }
+  .main-container #projects .feature {
+    height: 1600px;
+  }
+}
+
+@media (max-height: 575px) and (max-width: 750px) {
+  .main-container #projects {
+    height: 1300px;
   }
 }
 
@@ -648,6 +663,7 @@ nav .nav-wrapper .nav-sections .active {
 @media (max-width: 575px) {
   .main-container #projects .feature .feature-project .project-row .feature-img-wrapper {
     padding: 0;
+    padding-bottom: 1.5rem;
   }
 }
 

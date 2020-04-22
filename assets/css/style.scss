@@ -422,19 +422,31 @@ nav {
         height: 100vh;
         min-height: 100vh;
         padding: 0 10%;
+
         @media (min-width: 751px) and (max-width: 1380px) {
-            height: 710px;
+            height: 750px;
 
             .feature {
-                height: 710px;
+                height: 750px;
             }
         }
         @media (max-width: 750px) {
-            height: 1500px;
+            height: 2000px;
 
             .feature {
-                height: 1500px;
+                height: 2000px;
             }
+        }
+        // fix projects height for small mobile screens
+        @media (max-height: 675px) and (max-width: 750px) {
+            height: 1600px;
+
+            .feature {
+                height: 1600px;
+            }
+        }
+        @media (max-height: 575px) and (max-width: 750px) {
+            height: 1300px;
         }
 
         .projects-header {
@@ -505,6 +517,7 @@ nav {
                         }
                         @media(max-width: 575px) {
                             padding: 0;
+                            padding-bottom: 1.5rem;
                         }
 
                         .feature-img-container {
