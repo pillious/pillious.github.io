@@ -18,7 +18,7 @@ const projects = [{
     },
     {
         name: 'Covid-19 Visualizer',
-        desc: 'Check out the global Covid-19 data through searchable & sortable tables. Explore more in-depth data on the United States, including individual charts displaying the cases in each state.',
+        desc: 'Check out the global Covid-19 data through searchable & sortable tables. Explore in-depth data on the United States, including individual charts displaying the cases in each state.',
         tech: ['Node.js', 'Ejs', 'Chart.js', 'MDBootstrap'],
         img: 'assets/img/projects/feature-3.png',
         github: '',
@@ -34,7 +34,7 @@ const projects = [{
     },
     {
         name: 'NNHS Programming',
-        desc: 'A website from my high school&apos;s computer programming club.',
+        desc: 'A website for my high school&apos;s computer programming club.',
         tech: ['HTML', 'CSS'],
         img: 'assets/img/projects/feature-5.png',
         github: '',
@@ -42,7 +42,7 @@ const projects = [{
     },
     {
         name: 'Redefined',
-        desc: 'Create virtual decks of flashcards that can be used by anyone. Redefined has an auto-translation feature built into the flashcard creator.',
+        desc: 'Create and share virtual decks of flashcards. Redefined has an auto-translation feature built into the flashcard creator.',
         tech: ['Node.js', 'Ejs', 'Firebase', 'Yandex'],
         img: 'assets/img/projects/feature-6.png',
         github: '',
