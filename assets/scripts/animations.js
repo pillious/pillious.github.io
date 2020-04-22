@@ -41,7 +41,7 @@ function animateBackground() {
                 "enable": true,
                 "speed": 3,
                 "direction": "none",
-                "random": false,
+                "random": true,
                 "straight": false,
                 "out_mode": "out",
                 "bounce": false,
@@ -67,7 +67,7 @@ function animateBackground() {
             },
             "modes": {
                 "repulse": {
-                    "distance": 100,
+                    "distance": 65,
                     "duration": 0.4
                 },
                 "push": {

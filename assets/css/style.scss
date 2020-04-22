@@ -1,8 +1,9 @@
 // VARIABLES
-$colors: (blue-dark: rgb(64, 196, 255), blue-gray: rgb(38, 50, 56), grey-text: rgb(66, 66, 66), grey-background: rgb(250, 250, 250), gray-dark: rgb(27, 36, 47), gray-dark-overlay: rgba(27, 36, 47, 0.3), violet-red: rgb(277, 27, 109));
+$colors: (gray-text: rgb(66, 66, 66), gray-background: rgb(250, 250, 250), violet-red: rgb(277, 27, 109));
 
 $nav-height: 64px;
 
+// for reference
 // $small-screen: 600px !default;
 // $medium-screen: 992px !default;
 // $large-screen: 1200px !default;
@@ -132,7 +133,7 @@ body {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     box-sizing: border-box;
-    color: color(grey-text);
+    color: color(gray-text);
 }
 
 nav {
@@ -186,7 +187,7 @@ nav {
             }
 
             .active {
-                border-bottom: solid 3px color(blue-dark);
+                border-bottom: solid 3px rgb(64, 196, 255);
             }
         }
 
@@ -225,15 +226,15 @@ nav {
         height: calc(100vh - #{$nav-height});
         height: calc((var(--vh, 1vh) * 100));
 
-        .background {
+        #intro-background {
+            height: calc(100vh - #{$nav-height});
+            height: calc((var(--vh, 1vh) * 100));
             width: 100%;
-            height: 100%;
-            // background-image: linear-gradient(color(gray-dark-overlay), color(gray-dark-overlay)), url('/assets/img/space.jpg');
-            // background-position: center center;
-            // background-repeat: no-repeat;
-            // background-attachment: fixed;
-            // background-size: cover;
-            // background-color: darken(#263238, 4%);
+            background-color: darken(#263238, 5%);
+            ;
+            position: absolute;
+            top: 64px;
+            left: 0;
         }
 
         .intro-statement {
@@ -450,7 +451,7 @@ nav {
     }
 
     #projects {
-        background-color: color(grey-background);
+        background-color: color(gray-background);
         height: 100vh;
         min-height: 100vh;
         padding: 0 10%;
@@ -585,7 +586,7 @@ nav {
                                 transition: all 0.75s;
 
                                 &:hover {
-                                    background-color: rgba(color(grey-background), 0.75);
+                                    background-color: rgba(color(gray-background), 0.75);
                                     opacity: 1;
 
                                     .feature-caption {
@@ -614,7 +615,7 @@ nav {
                                             font-size: 1.4rem;
                                             font-weight: 700;
                                             padding-bottom: 0.75rem;
-                                            color: color(blue-gray);
+                                            color: rgb(38, 50, 56);
                                         }
 
                                         .feature-text {
@@ -805,7 +806,7 @@ nav {
                 font-size: 1.4rem;
                 font-weight: 700;
                 padding: 0.75rem 0;
-                color: color(blue-gray);
+                color: rgb(38, 50, 56);
             }
 
             .modal-desc {
@@ -842,21 +843,11 @@ nav {
 
     .modal-footer {
         .modal-close {
-            color: lighten(color(gray-dark), 20%);
+            color: lighten(rgb(27, 36, 47), 20%);
         }
 
         .fa-times {
             font-size: 2rem;
         }
     }
-}
-
-#intro-background {
-    height: calc(100vh - #{$nav-height});
-    height: calc((var(--vh, 1vh) * 100));
-    width: 100%;
-    background-color: darken(#263238, 5%);;
-    position: absolute;
-    top: 64px;
-    left: 0;
 }

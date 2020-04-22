@@ -276,9 +276,14 @@ nav .nav-wrapper .nav-sections .active {
   height: calc((var(--vh, 1vh) * 100));
 }
 
-.main-container #intro .background {
+.main-container #intro #intro-background {
+  height: calc(100vh - 64px);
+  height: calc((var(--vh, 1vh) * 100));
   width: 100%;
-  height: 100%;
+  background-color: #1c2429;
+  position: absolute;
+  top: 64px;
+  left: 0;
 }
 
 .main-container #intro .intro-statement {
@@ -978,15 +983,5 @@ nav .nav-wrapper .nav-sections .active {
 
 .modal .modal-footer .fa-times {
   font-size: 2rem;
-}
-
-#intro-background {
-  height: calc(100vh - 64px);
-  height: calc((var(--vh, 1vh) * 100));
-  width: 100%;
-  background-color: #1c2429;
-  position: absolute;
-  top: 64px;
-  left: 0;
 }
 /*# sourceMappingURL=style.css.map */
