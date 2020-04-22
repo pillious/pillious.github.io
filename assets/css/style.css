@@ -238,8 +238,8 @@ nav .nav-wrapper .nav-sections .active {
 }
 
 @media (max-width: 600px) {
-  nav .nav-wrapper .slideup,
-  nav .nav-wrapper .slidedown {
+  nav .nav-wrapper .slidedown,
+  nav .nav-wrapper .slideup {
     max-height: 0;
     overflow-y: hidden;
     -webkit-transition: max-height 0.8s ease-in-out;
@@ -461,8 +461,7 @@ nav .nav-wrapper .nav-sections .active {
 
 @media (max-width: 810px) {
   .main-container #about .about-main .about-description .current-wrapper {
-    margin: 0;
-    margin-bottom: 3rem;
+    margin: 0 0 3rem;
   }
 }
 
@@ -574,16 +573,28 @@ nav .nav-wrapper .nav-sections .active {
   height: 600px;
 }
 
-.main-container #projects .feature .feature-project .project-row:nth-child(1) .feature-img {
-  background: url("../img/projects/feature-1.jpg") center center/cover;
+.main-container #projects .feature .feature-project .project-row .feature-img-wrapper:nth-child(1) .feature-img {
+  background: url("../img/projects/feature-1.png") center center/cover;
 }
 
-.main-container #projects .feature .feature-project .project-row:nth-child(2) .feature-img {
-  background: url("../img/projects/feature-2.jpg") center center/cover;
+.main-container #projects .feature .feature-project .project-row .feature-img-wrapper:nth-child(2) .feature-img {
+  background: url("../img/projects/feature-2.png") center center/cover;
 }
 
-.main-container #projects .feature .feature-project .project-row:nth-child(3) .feature-img {
-  background: url("../img/projects/feature-3.jpg") center center/cover;
+.main-container #projects .feature .feature-project .project-row .feature-img-wrapper:nth-child(3) .feature-img {
+  background: url("../img/projects/feature-3.png") center center/cover;
+}
+
+.main-container #projects .feature .feature-project .project-row .feature-img-wrapper:nth-child(4) .feature-img {
+  background: url("../img/projects/feature-4.png") center center/cover;
+}
+
+.main-container #projects .feature .feature-project .project-row .feature-img-wrapper:nth-child(5) .feature-img {
+  background: url("../img/projects/feature-5.png") center center/cover;
+}
+
+.main-container #projects .feature .feature-project .project-row .feature-img-wrapper:nth-child(6) .feature-img {
+  background: url("../img/projects/feature-6.png") center center/cover;
 }
 
 .main-container #projects .feature .feature-project {
@@ -604,7 +615,7 @@ nav .nav-wrapper .nav-sections .active {
 
 @media (min-width: 1381px) {
   .main-container #projects .feature .feature-project .project-row .feature-img-wrapper:nth-child(3n+2) {
-    padding: 0 0.75rem 1.5rem 0.75rem;
+    padding: 0 0.75rem 1.5rem;
   }
   .main-container #projects .feature .feature-project .project-row .feature-img-wrapper:nth-child(3n+1) {
     padding-right: 0.75rem;
@@ -915,7 +926,7 @@ nav .nav-wrapper .nav-sections .active {
 .modal .modal-content .modal-caption .modal-title {
   font-size: 1.4rem;
   font-weight: 700;
-  padding: 0.75rem 0 0.75rem 0;
+  padding: 0.75rem 0;
   color: #263238;
 }
 
@@ -929,10 +940,15 @@ nav .nav-wrapper .nav-sections .active {
   font-weight: 300;
   font-size: 1.1rem;
   color: #ce004a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .modal .modal-content .modal-caption .modal-tech span {
-  padding-right: 0.5rem;
+  padding-right: 0.75rem;
 }
 
 .modal .modal-content .modal-caption .modal-btns {

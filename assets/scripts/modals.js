@@ -1,30 +1,53 @@
 var projectModalInstance;
 
-const projects = [
-    {
-        name:'Lorem 1',
-        desc: 'Hello here, hello there, hello everywhere!',
-        tech: ['HTML', 'Node.js', 'ejs', 'something', 'test', '123'],
-        img: 'assets/img/feature-1.jpg',
-        github: 'https://github.com',
-        site: 'https://github.com/pillious'
-    },
-    {
-        name:'Lorem 2',
-        desc: 'lorem ipsum something someting 123 blah blah blah.',
-        tech: ['JavaScript', 'Node.js'],
-        img: 'assets/img/feature-1.jpg',
+const projects = [{
+        name: 'Acaply',
+        desc: 'Acaply is an internet forum built specifically for students.  It provides a central location for students to easily conduct discussions, post club updates, and advertise fundraisers.',
+        tech: ['Node.js', 'Ejs', 'MongoDB', 'Bootstrap', 'SendGrid'],
+        img: 'assets/img/projects/feature-1.png',
         github: '',
-        site: 'https://github.com/pillious'
+        site: 'https://acaply.com/'
     },
     {
-        name:'Lorem 3',
-        desc: 'lorem ipsum something someting 123 blah blah blah.',
-        tech: ['JavaScript', 'Node.js'],
-        img: 'assets/img/feature-1.jpg',
-        github: 'https://github.com',
-        site: 'https://github.com/pillious'
-    }
+        name: 'Covid-19 API',
+        desc: 'A REST API which provides daily, up to date data on the 2020 global Covid-19 pandemic. The data is retrieved from WHO&apos;s detailed reports.',
+        tech: ['Node.js', 'MongoDB', 'Zeit'],
+        img: 'assets/img/projects/feature-2.png',
+        github: 'https://github.com/pillious/Covid-19-Api',
+        site: 'https://rapidapi.com/pillious/api/who-covid-19-data'
+    },
+    {
+        name: 'Covid-19 Visualizer',
+        desc: 'Check out the global Covid-19 data through searchable & sortable tables. Explore more in-depth data on the United States, including individual charts displaying the cases in each state.',
+        tech: ['Node.js', 'Ejs', 'Chart.js', 'MDBootstrap'],
+        img: 'assets/img/projects/feature-3.png',
+        github: '',
+        site: 'http://virus.thehumboo.com'
+    },
+    {
+        name: 'Newton Pavements',
+        desc: 'A website that displays future road work sites in the city. Residents may also search for streets in Newton to get a sense of their current condition.',
+        tech: ['JavaScript', 'Bootstrap', 'Google Maps'],
+        img: 'assets/img/projects/feature-4.png',
+        github: '',
+        site: 'https://www.thehumboo.com/newton-pavements/'
+    },
+    {
+        name: 'NNHS Programming',
+        desc: 'A website from my high school&apos;s computer programming club.',
+        tech: ['HTML', 'CSS'],
+        img: 'assets/img/projects/feature-5.png',
+        github: '',
+        site: 'https://pillious.github.io/nnhsprogramming/'
+    },
+    {
+        name: 'Redefined',
+        desc: 'Create virtual decks of flashcards that can be used by anyone. Redefined has an auto-translation feature built into the flashcard creator.',
+        tech: ['Node.js', 'Ejs', 'Firebase', 'Yandex'],
+        img: 'assets/img/projects/feature-6.png',
+        github: '',
+        site: 'https://pillious.github.io/nnhsprogramming/'
+    },
 ]
 
 $(document).ready(function () {
@@ -52,20 +75,18 @@ function fillModal(projectNum) {
     if (projectInfo.github != '') {
         $("#modal-github").show();
         $("#modal-github").on("click", () => {
-            window.open(projectInfo.github);
+            window.location = projectInfo.github;
         });
-    }
-    else {
+    } else {
         $("#modal-github").hide();
     }
 
     if (projectInfo.site != '') {
         $("#modal-site").show();
         $("#modal-site").on("click", () => {
-            window.open(projectInfo.site);
+            window.location = projectInfo.site;
         });
-    }
-    else {
+    } else {
         $("#modal-site").hide();
     }
 
@@ -76,8 +97,7 @@ function fillModal(projectNum) {
         });
         $("#modal-tech").html(innerHTML);
         $("#modal-tech").show();
-    }
-    else {
+    } else {
         $("#modal-tech").hide();
     }
 }
