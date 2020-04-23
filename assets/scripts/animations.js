@@ -8,10 +8,10 @@ function animateBackground() {
     particlesJS("intro-background", {
         "particles": {
             "number": {
-                "value": 275,
+                "value": 125,
                 "density": {
                     "enable": true,
-                    "value_area": 700
+                    "value_area": 1000
                 }
             },
             "color": {
@@ -35,7 +35,7 @@ function animateBackground() {
                 "enable": true,
                 "color": '#64ffda',
                 "opacity": 0.15,
-                "distance": 50,
+                "distance": 60,
             },
             "move": {
                 "enable": true,
