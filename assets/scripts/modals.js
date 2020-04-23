@@ -46,7 +46,7 @@ const projects = [{
         tech: ['Node.js', 'Ejs', 'Firebase', 'Yandex'],
         img: 'assets/img/projects/feature-6.png',
         github: '',
-        site: 'https://pillious.github.io/nnhsprogramming/'
+        site: 'http://redefined.herokuapp.com/'
     },
 ]
 
