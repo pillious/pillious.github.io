@@ -1,3 +1,15 @@
+var contactModalInstance;
+
+$(document).ready(function () {
+    // initialize the contact me modal
+    var contactModal = document.querySelector('#contact-modal');
+    contactModalInstance = M.Modal.init(contactModal);
+
+    // initialize materialize tooltips
+    var elems = document.querySelectorAll('.tooltipped');
+    var tooltipInstances = M.Tooltip.init(elems);
+});
+
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
@@ -86,8 +98,8 @@ $('a[href^=mailto]').each(function () {
         });
 
         t = setTimeout(function () {
-            // The browser did not respond after 500ms, so open an alternative URL.
-            document.location.href = '...';
-        }, 500);
+            // The browser did not respond after 1s, so open an alternative URL.
+            location.href = 'https://mail.google.com/mail/?view=cm&fs=1&to=andrewzhlee@gmail.com';
+        }, 1000);
     });
 });

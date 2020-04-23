@@ -52,7 +52,7 @@ const projects = [{
 
 $(document).ready(function () {
     // initialize the projects modal
-    var projectModal = document.querySelector('.modal');
+    var projectModal = document.querySelector('#project-modal');
     projectModalInstance = M.Modal.init(projectModal);
 
     fillModal(0);
