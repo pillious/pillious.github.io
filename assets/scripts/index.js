@@ -5,9 +5,9 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 // We listen to the resize event
 window.addEventListener('resize', () => {
-  // We execute the same script as before
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
+    // We execute the same script as before
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
 // Smoothly scroll between sections & update navbar with active section
@@ -64,8 +64,8 @@ $(window).scroll(function () {
 function scrollToSection(section) {
     // use +1px to update the active section in navbar
     $('html,body').animate({
-            scrollTop: $('#' + section).offset().top - topMenuHeight + 1
-    },'slow');
+        scrollTop: $('#' + section).offset().top - topMenuHeight + 1
+    }, 'slow');
 }
 
 // open and close for collapsed navbar (mobile)
@@ -73,3 +73,21 @@ $('#nav-dropdown-trigger').click(function (e) {
     e.preventDefault();
     $('#nav-sections').toggleClass("slideup slidedown");
 })
+
+// detect if mailto: worked
+$('a[href^=mailto]').each(function () {
+    var href = $(this).attr('href');
+    $(this).click(function () {
+        var t;
+        var self = $(this);
+        $(window).blur(function () {
+            // The browser apparently responded, so stop the timeout.
+            clearTimeout(t);
+        });
+
+        t = setTimeout(function () {
+            // The browser did not respond after 500ms, so open an alternative URL.
+            document.location.href = '...';
+        }, 500);
+    });
+});
