@@ -476,6 +476,7 @@ nav {
             .feature {
                 padding-top: 5rem;
                 height: calc(100% - 48px);
+                min-height: calc(148px + (275px * 3));
 
                 @for $i from 1 through 6 {
                     .feature-project {
@@ -510,14 +511,12 @@ nav {
                             height: 50%;
                             max-width: 350px;
                             max-height: 300px;
-                            min-height: 250px;
+                            min-height: 275px;
                             display: inline-block;
                             padding-bottom: 1.5rem;
                             opacity: 0;
 
                             @media (min-width: 1381px) {
-
-
                                 &:nth-child(3n+2) {
                                     padding: 0 0.75rem 1.5rem;
                                 }
