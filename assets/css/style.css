@@ -753,6 +753,7 @@ nav .nav-wrapper .nav-sections .active {
 
 .main-container #footer .contact {
   height: 75%;
+  min-height: 200px;
   background-color: #202a2f;
 }
 
