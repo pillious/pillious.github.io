@@ -758,7 +758,7 @@ nav .nav-wrapper .nav-sections .active {
 
 .main-container #footer .contact {
   height: 75%;
-  min-height: 200px;
+  min-height: 340px;
   background-color: #202a2f;
 }
 
@@ -841,6 +841,7 @@ nav .nav-wrapper .nav-sections .active {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 25%;
+  min-height: 90px;
   background-color: #1e272c;
 }
 

@@ -657,7 +657,7 @@ nav {
 
         .contact {
             height: 75%;
-            min-height: 200px;
+            min-height: 340px;
             background-color: darken(#263238, 3%);
 
             .contact-header {
@@ -721,6 +721,7 @@ nav {
             justify-content: center;
             flex-direction: column;
             height: 25%;
+            min-height: 90px;
             background-color: darken(#263238, 4%);
 
             .footer-icons {
