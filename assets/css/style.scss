@@ -451,195 +451,206 @@ nav {
 
     #projects {
         background-color: color(gray-background);
-        height: 100vh;
+        height: 125vh;
+        width: 100%;
         min-height: 100vh;
-        padding: 0 10%;
+        padding: 0 10% 10% 10%;
 
-        @media (min-width: 751px) and (max-width: 1380px) {
-            height: 750px;
+        // @media (min-width: 751px) and (max-width: 1380px) {
+        //     height: 750px;
 
-            .feature {
-                height: 750px;
-            }
-        }
+        //     .feature {
+        //         height: 750px;
+        //     }
+        // }
 
         @media (max-width: 750px) {
-            height: 2000px;
-
-            .feature {
-                height: 2000px;
-            }
+            height: 200vh;
         }
 
-        // fix projects height for small mobile screens
-        @media (max-height: 675px) and (max-width: 750px) {
-            height: 1600px;
+        // // fix projects height for small mobile screens
+        // @media (max-height: 675px) and (max-width: 750px) {
+        //     height: 1600px;
 
-            .feature {
-                height: 1600px;
-            }
-        }
+        //     .feature {
+        //         height: 1600px;
+        //     }
+        // }
 
-        @media (max-height: 575px) and (max-width: 750px) {
-            height: 1300px;
-        }
+        // @media (max-height: 575px) and (max-width: 750px) {
+        //     height: 1300px;
+        // }
 
-        .projects-header {
-            font-weight: 700;
-            font-size: 2.2rem;
-            text-transform: capitalize;
-            text-align: center;
-            letter-spacing: 2px;
-            padding-top: 48px;
-            opacity: 0;
-        }
+        .container {
+            height: 100%;
 
-        .feature {
-            padding-top: 5rem;
-            height: 600px;
+            .projects-header {
+                height: 10%;
+                font-weight: 700;
+                font-size: 2.2rem;
+                text-transform: capitalize;
+                text-align: center;
+                letter-spacing: 2px;
+                padding-top: 48px;
+                opacity: 0;
 
-            @for $i from 1 through 6 {
-                .feature-project {
-                    .project-row {
-                        .feature-img-wrapper {
-                            &:nth-child(#{$i}) {
-                                .feature-img {
-                                    background: url('../img/projects/feature-#{$i}.png') center center/cover;
-                                }
-                            }
-                        }
-
-                    }
+                @media (max-width: 750px) {
+                    height: 6.5%;
                 }
             }
 
-            .feature-project {
-                height: 33vh;
+            .feature {
+                padding-top: 5rem;
+                height: 90%;
 
-                .project-row {
+                @for $i from 1 through 6 {
+                    .feature-project {
+                        .project-row {
+                            .feature-img-wrapper {
+                                &:nth-child(#{$i}) {
+                                    .feature-img {
+                                        background: url('../img/projects/feature-#{$i}.png') center center/cover;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+
+                @media (max-width: 750px) {
+                    padding-top: 0;
+                }
+
+                .feature-project {
                     height: 100%;
 
-                    .feature-img-wrapper {
-                        width: 33%;
-                        height: 80%;
-                        display: inline-block;
-                        padding-bottom: 1.5rem;
-                        opacity: 0;
+                    .project-row {
+                        height: 100%;
 
-                        @media (min-width: 1381px) {
-                            &:nth-child(3n+2) {
-                                padding: 0 0.75rem 1.5rem;
-                            }
-
-                            &:nth-child(3n+1) {
-                                padding-right: 0.75rem;
-                            }
-
-                            &:nth-child(3n+3) {
-                                padding-left: 0.75rem;
-                            }
-                        }
-
-                        @media (min-width: 751px) and (max-width: 1380px) {
-                            width: 49%;
-
-                            &:nth-child(2n+1) {
-                                padding-right: 0.75rem;
-                            }
-
-                            &:nth-child(2n+2) {
-                                padding-left: 0.75rem;
-                            }
-                        }
-
-                        @media (max-width: 750px) {
-                            width: 100%;
-                            height: 90%;
-
-                            padding: 0 5rem;
-                        }
-
-                        @media(max-width: 575px) {
-                            padding: 0;
+                        .feature-img-wrapper {
+                            width: 33%;
+                            height: 50%;
+                            max-height: 300px;
+                            display: inline-block;
                             padding-bottom: 1.5rem;
-                        }
+                            opacity: 0;
 
-                        .feature-img-container {
-                            position: relative;
-                            height: 100%;
-                            width: 100%;
-                            z-index: 2;
+                            @media (min-width: 1381px) {
+                                &:nth-child(3n+2) {
+                                    padding: 0 0.75rem 1.5rem;
+                                }
 
-                            .feature-img {
+                                &:nth-child(3n+1) {
+                                    padding-right: 0.75rem;
+                                }
+
+                                &:nth-child(3n+3) {
+                                    padding-left: 0.75rem;
+                                }
+                            }
+
+                            @media (min-width: 751px) and (max-width: 1380px) {
+                                width: 49%;
+                                height: 33%;
+
+                                &:nth-child(2n+1) {
+                                    padding-right: 0.75rem;
+                                }
+
+                                &:nth-child(2n+2) {
+                                    padding-left: 0.75rem;
+                                }
+                            }
+
+                            @media (max-width: 750px) {
+                                width: 100%;
+                                height: 16.5%;
+                                padding: 0 5rem 0.75rem;
+                            }
+
+                            // @media(max-width: 575px) {
+                            //     padding: 0;
+                            //     padding-bottom: 1.5rem;
+                            // }
+
+                            .feature-img-container {
                                 position: relative;
                                 height: 100%;
                                 width: 100%;
-                            }
-
-                            .overlay {
                                 z-index: 2;
-                                position: absolute;
-                                top: 0;
-                                height: 100%;
-                                width: 100%;
-                                transition: all 0.75s;
 
-                                &:hover {
-                                    background-color: rgba(color(gray-background), 0.75);
-                                    opacity: 1;
-
-                                    .feature-caption {
-                                        opacity: 1;
-
-                                        button {
-                                            visibility: visible !important;
-                                        }
-                                    }
+                                .feature-img {
+                                    position: relative;
+                                    height: 100%;
+                                    width: 100%;
                                 }
 
-                                .feature-caption {
-                                    opacity: 0;
-                                    position: static;
+                                .overlay {
+                                    z-index: 2;
+                                    position: absolute;
+                                    top: 0;
                                     height: 100%;
-                                    transition: 0.8s;
+                                    width: 100%;
+                                    transition: all 0.75s;
 
-                                    .feature-center {
-                                        height: 100%;
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: center;
-                                        flex-direction: column;
+                                    &:hover {
+                                        background-color: rgba(color(gray-background), 0.75);
+                                        opacity: 1;
 
-                                        .feature-title {
-                                            font-size: 1.4rem;
-                                            font-weight: 700;
-                                            padding-bottom: 0.75rem;
-                                            color: rgb(38, 50, 56);
-                                        }
+                                        .feature-caption {
+                                            opacity: 1;
 
-                                        .feature-text {
-                                            font-size: 1.1rem;
-                                            padding-bottom: 1rem;
-                                        }
-
-                                        .feature-short-desc {
-                                            padding-bottom: 2rem;
-                                            font-size: 1.1rem;
-                                            color: color(violet-red);
-
-                                            span {
-                                                padding-right: 0.5rem;
+                                            button {
+                                                visibility: visible !important;
                                             }
                                         }
+                                    }
 
-                                        .feature-btn {
-                                            button {
-                                                visibility: hidden;
+                                    .feature-caption {
+                                        opacity: 0;
+                                        position: static;
+                                        height: 100%;
+                                        transition: 0.8s;
 
-                                                i {
-                                                    font-size: 1.5rem;
-                                                    color: #fff;
-                                                    transform: translateY(3px);
+                                        .feature-center {
+                                            height: 100%;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            flex-direction: column;
+
+                                            .feature-title {
+                                                font-size: 1.4rem;
+                                                font-weight: 700;
+                                                padding-bottom: 0.75rem;
+                                                color: rgb(38, 50, 56);
+                                            }
+
+                                            .feature-text {
+                                                font-size: 1.1rem;
+                                                padding-bottom: 1rem;
+                                            }
+
+                                            .feature-short-desc {
+                                                padding-bottom: 2rem;
+                                                font-size: 1.1rem;
+                                                color: color(violet-red);
+
+                                                span {
+                                                    padding-right: 0.5rem;
+                                                }
+                                            }
+
+                                            .feature-btn {
+                                                button {
+                                                    visibility: hidden;
+
+                                                    i {
+                                                        font-size: 1.5rem;
+                                                        color: #fff;
+                                                        transform: translateY(3px);
+                                                    }
                                                 }
                                             }
                                         }
@@ -648,6 +659,7 @@ nav {
                             }
                         }
                     }
+
                 }
 
             }
