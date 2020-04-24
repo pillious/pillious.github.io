@@ -474,9 +474,8 @@ nav {
             }
 
             .feature {
-                padding-top: 5rem;
                 height: calc(100% - 48px);
-                min-height: calc(148px + (275px * 3));
+                min-height: calc(275px * 3);
 
                 @for $i from 1 through 6 {
                     .feature-project {

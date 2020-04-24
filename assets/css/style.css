@@ -561,9 +561,8 @@ nav .nav-wrapper .nav-sections .active {
 }
 
 .main-container #projects .container .feature {
-  padding-top: 5rem;
   height: calc(100% - 48px);
-  min-height: calc(148px + (275px * 3));
+  min-height: calc(275px * 3);
 }
 
 .main-container #projects .container .feature .feature-project .project-row .feature-img-wrapper:nth-child(1) .feature-img {
