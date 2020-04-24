@@ -452,12 +452,14 @@ nav {
     #projects {
         background-color: color(gray-background);
         width: 100%;
+        height: calc(150px + (275px * 3));
         min-height: 100vh;
         padding: 0 10% 10% 10%;
 
-        @media (min-width: 751px) {
-            height: 125vh;
+        @media (max-width: 750px) {
+            height: calc(150px + (275px * 6));
         }
+        
 
         .container {
             height: 100%;
@@ -474,8 +476,8 @@ nav {
             }
 
             .feature {
-                height: calc(100% - 48px);
-                min-height: calc(275px * 3);
+                height: calc(100% - 150px);
+                // min-height: calc((275px * 3));
 
                 @for $i from 1 through 6 {
                     .feature-project {
@@ -496,7 +498,7 @@ nav {
                     padding-top: 0;
 
                     // 148px = projects header height, 250px = height of each project on mobile, 6 = number of project
-                    height: calc(148px + (250px * 6));
+                    height: calc(148px - (250px * 6));
                 }
 
                 .feature-project {
