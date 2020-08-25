@@ -223,6 +223,25 @@ nav .nav-wrapper .brand-logo {
   }
 }
 
+nav .nav-wrapper ul.right .color-modes-container {
+  cursor: pointer;
+  margin-bottom: -3px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+nav .nav-wrapper ul.right .color-modes-container .light-mode-icon {
+  display: block;
+  color: #f9d71c;
+}
+
+nav .nav-wrapper ul.right .color-modes-container .dark-mode-icon {
+  display: none;
+  color: #c5c5c5;
+}
+
 nav .nav-wrapper ul.right li {
   padding: 0 0.5rem;
 }
@@ -233,15 +252,6 @@ nav .nav-wrapper ul.right li a {
   text-transform: uppercase;
   margin-bottom: -3px;
   width: 100%;
-}
-
-nav .nav-wrapper ul.right li i {
-  cursor: pointer;
-  margin-bottom: -3px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 
 nav .nav-wrapper ul.right .active {
@@ -1001,6 +1011,14 @@ dark mode tips:
 https://material.io/design/color/dark-theme.html#ui-application
 https://uxplanet.org/8-tips-for-dark-theme-design-8dfc2f8f7ab6
 */
+[data-theme="dark"] nav .nav-wrapper ul.right .color-modes-container .light-mode-icon {
+  display: none;
+}
+
+[data-theme="dark"] nav .nav-wrapper ul.right .color-modes-container .dark-mode-icon {
+  display: block;
+}
+
 [data-theme="dark"] .about-wrapper {
   background-color: #202a2f;
   color: rgba(255, 255, 255, 0.87);

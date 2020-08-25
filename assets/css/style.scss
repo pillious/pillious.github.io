@@ -179,6 +179,22 @@ nav {
         }
 
         ul.right {
+            .color-modes-container {
+                cursor: pointer;
+                margin-bottom: -3px;
+                user-select: none;
+
+                .light-mode-icon {
+                    display: block;
+                    color: #f9d71c;
+                }
+
+                .dark-mode-icon {
+                    display: none;
+                    color: #c5c5c5
+                }
+            }
+
             li {
                 padding: 0 0.5rem;
 
@@ -188,12 +204,6 @@ nav {
                     text-transform: uppercase;
                     margin-bottom: -3px;
                     width: 100%;
-                }
-
-                i {
-                    cursor: pointer;
-                    margin-bottom: -3px;
-                    user-select: none;
                 }
             }
 
@@ -871,66 +881,82 @@ https://material.io/design/color/dark-theme.html#ui-application
 https://uxplanet.org/8-tips-for-dark-theme-design-8dfc2f8f7ab6
 */
 [data-theme="dark"] {
+    nav {
+        .nav-wrapper {
+            ul.right {
+                .color-modes-container {
+                    .light-mode-icon {
+                        display: none;
+                    }
+
+                    .dark-mode-icon {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
     .about-wrapper {
         background-color: #202a2f;
         color: color(high-emphasis);
-    
+
         .bio-body {
             color: color(medium-emphasis);
         }
-    
+
         .current-body {
             color: color(medium-emphasis);
         }
-    
+
         .skill {
             color: color(medium-emphasis)
         }
     }
-    
+
     #projects {
         background-color: #1e272c;
         color: rgba(255, 255, 255, .87);
-    
+
         .feature-img {
             filter: grayscale(.5);
         }
     }
-    
+
     #project-modal {
         background-color: #202a2f;
-    
+
         .modal-content {
             .modal-img-wrapper {
                 .modal-img {
                     filter: grayscale(0.5)
                 }
             }
-    
+
             .modal-title {
                 color: color(high-emphasis);
             }
-    
+
             .modal-desc {
                 color: color(medium-emphasis);
             }
-    
+
             .modal-tech {
                 span {
                     color: #bb86fc;
                 }
             }
-    
+
             .modal-btns {
                 button {
                     background-color: #03dac5;
                 }
             }
         }
-    
+
         .modal-footer {
             background-color: #202a2f;
-    
+
             .modal-close {
                 color: #db1b4f;
             }
