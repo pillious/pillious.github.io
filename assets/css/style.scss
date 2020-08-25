@@ -183,6 +183,12 @@ nav {
                     margin-bottom: -3px;
                     width: 100%;
                 }
+
+                i {
+                    cursor: pointer;
+                    margin-bottom: -3px;
+                    user-select: none;
+                }
             }
 
             .active {
@@ -844,4 +850,8 @@ nav {
             font-size: 2rem;
         }
     }
+}
+
+.about-wrapper.dark {
+    background-color: black;
 }

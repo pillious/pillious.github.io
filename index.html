@@ -45,6 +45,13 @@
                 <a class="brand-logo" onclick="scrollToSection('intro')">Andrew Lee</a>
                 <a href="#" data-target="nav-sections" class="nav-dropdown-trigger" id="nav-dropdown-trigger" aria-label="expand navigation bar"><i
                         class="material-icons hide-on-med-and-up">menu</i></a>
+                <ul class="right nav-sections">
+                    <li>
+                        <i class="material-icons toggle-color-mode" onclick="updateColorPreference()">wb_sunny</i>
+                        <!-- <i class="material-icons">brightness_2</i> -->
+
+                    </li>
+                </ul>
                 <ul class="right nav-sections nav-dropdown slideup" id="nav-sections">
                     <li class="active">
                         <a href="#intro">Home</a>
@@ -76,86 +83,89 @@
             </div>
         </section>
 
-        <div class="container">
-            <!-- ABOUT -->
-            <section id="about">
-                <div class="about-header animate" data-animate="fadeIn 1s ease">
-                    <div class="about-title">About Me</div>
-                </div>
-                <div class="about-main">
-                    <div class="row">
-                        <div class="col s6 about-description animate" data-animate="slideFromLeft 1s ease-out">
-                            <div class="bio-wrapper">
-                                <div class="bio-title">Who am I?</div>
-                                <div class="bio-body">I'm a junior in highschool who has an intrest in programming. I spend my free time developing
-                                    various web applications and learning new technologies.</div>
-                            </div>
-                            <div class="current-wrapper">
-                                <div class="current-title">What am I up to now?</div>
-                                <div class="current-body">I am currently taking a great course on data science. It covers statistical
-                                    mathematics, statistics in Python, and machine/deep learning.</div>
-                            </div>
-                        </div>
-                        <div class="col s6 skills-description animate" data-animate="slideFromRight 1s ease-out">
-                            <div class="skills-title">
-                                Recent Technologies
-                            </div>
-                            <div class="row skills-list-col">
-                                <div class="col s3">
-                                    <div class="skill">
-                                        <i class="devicon-html5-plain colored"></i>
-                                        <div>HTML</div>
-                                    </div>
+        <div class="about-wrapper">
+            <div class="container">
+                <!-- ABOUT -->
+                <section id="about">
+                    <div class="about-header animate" data-animate="fadeIn 1s ease">
+                        <div class="about-title">About Me</div>
+                    </div>
+                    <div class="about-main">
+                        <div class="row">
+                            <div class="col s6 about-description animate" data-animate="slideFromLeft 1s ease-out">
+                                <div class="bio-wrapper">
+                                    <div class="bio-title">Who am I?</div>
+                                    <div class="bio-body">I'm a junior in highschool who has an intrest in programming. I spend my free time
+                                        developing
+                                        various web applications and learning new technologies.</div>
                                 </div>
-                                <div class="col s3">
-                                    <div class="skill">
-                                        <i class="devicon-javascript-plain colored"></i>
-                                        <div>Javascript</div>
-                                    </div>
-                                </div>
-                                <div class="col s3">
-                                    <div class="skill">
-                                        <i class="devicon-css3-plain colored"></i>
-                                        <div>(S)CSS</div>
-                                    </div>
-                                </div>
-                                <div class="col s3">
-                                    <div class="skill">
-                                        <i class="devicon-bootstrap-plain colored"></i>
-                                        <div>Bootstrap</div>
-                                    </div>
+                                <div class="current-wrapper">
+                                    <div class="current-title">What am I up to now?</div>
+                                    <div class="current-body">I am currently taking a great course on data science. It covers statistical
+                                        mathematics, statistics in Python, and machine/deep learning.</div>
                                 </div>
                             </div>
-                            <div class="row skills-list-col">
-                                <div class="col s3">
-                                    <div class="skill">
-                                        <i class="devicon-nodejs-plain colored"></i>
-                                        <div>Node.js</div>
+                            <div class="col s6 skills-description animate" data-animate="slideFromRight 1s ease-out">
+                                <div class="skills-title">
+                                    Recent Technologies
+                                </div>
+                                <div class="row skills-list-col">
+                                    <div class="col s3">
+                                        <div class="skill">
+                                            <i class="devicon-html5-plain colored"></i>
+                                            <div>HTML</div>
+                                        </div>
+                                    </div>
+                                    <div class="col s3">
+                                        <div class="skill">
+                                            <i class="devicon-javascript-plain colored"></i>
+                                            <div>Javascript</div>
+                                        </div>
+                                    </div>
+                                    <div class="col s3">
+                                        <div class="skill">
+                                            <i class="devicon-css3-plain colored"></i>
+                                            <div>(S)CSS</div>
+                                        </div>
+                                    </div>
+                                    <div class="col s3">
+                                        <div class="skill">
+                                            <i class="devicon-bootstrap-plain colored"></i>
+                                            <div>Bootstrap</div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col s3">
-                                    <div class="skill">
-                                        <i class="devicon-mongodb-plain colored"></i>
-                                        <div>MongoDB</div>
+                                <div class="row skills-list-col">
+                                    <div class="col s3">
+                                        <div class="skill">
+                                            <i class="devicon-nodejs-plain colored"></i>
+                                            <div>Node.js</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col s3">
-                                    <div class="skill">
-                                        <i class="devicon-heroku-original colored"></i>
-                                        <div>Heroku</div>
+                                    <div class="col s3">
+                                        <div class="skill">
+                                            <i class="devicon-mongodb-plain colored"></i>
+                                            <div>MongoDB</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col s3">
-                                    <div class="skill">
-                                        <i class="devicon-git-plain colored"></i>
-                                        <div>Git/Github</div>
+                                    <div class="col s3">
+                                        <div class="skill">
+                                            <i class="devicon-heroku-original colored"></i>
+                                            <div>Heroku</div>
+                                        </div>
+                                    </div>
+                                    <div class="col s3">
+                                        <div class="skill">
+                                            <i class="devicon-git-plain colored"></i>
+                                            <div>Git/Github</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
         </div>
 
         <!-- PROJECTS -->
@@ -341,6 +351,7 @@
     <script src="assets/scripts/index.js"></script>
     <script src="assets/scripts/projects.js"></script>
     <script src="assets/scripts/animations.js"></script>
+    <script src="assets/scripts/dark.js"></script>
 </body>
 
 </html>

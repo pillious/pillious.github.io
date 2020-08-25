@@ -233,6 +233,15 @@ nav .nav-wrapper .nav-sections li a {
   width: 100%;
 }
 
+nav .nav-wrapper .nav-sections li i {
+  cursor: pointer;
+  margin-bottom: -3px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 nav .nav-wrapper .nav-sections .active {
   border-bottom: solid 3px #40c4ff;
 }
@@ -974,5 +983,9 @@ nav .nav-wrapper .nav-sections .active {
 
 #project-modal .modal-footer .fa-times {
   font-size: 2rem;
+}
+
+.about-wrapper.dark {
+  background-color: black;
 }
 /*# sourceMappingURL=style.css.map */
