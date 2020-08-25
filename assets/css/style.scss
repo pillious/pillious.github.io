@@ -2,7 +2,7 @@
 $colors: (gray-text: rgb(66, 66, 66), gray-background: #f5f5f5, violet-red: rgb(277, 27, 109));
 $nav-height: 64px;
 
-// for reference
+// For reference
 // $small-screen: 600px !default;
 // $medium-screen: 992px !default;
 // $large-screen: 1200px !default;
@@ -431,14 +431,12 @@ nav {
                             display: inline-block;
                             padding-right: 2rem;
 
-                            img {
-                                max-width: 64px;
-                                max-height: 64px;
+                            i {
+                                font-size: 64px;
                                 display: inline-block;
 
                                 @include for-about-section-small {
-                                    max-width: 50px;
-                                    max-height: 50px;
+                                    font-size: 50px;
                                 }
                             }
                         }

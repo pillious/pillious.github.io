@@ -519,16 +519,14 @@ nav .nav-wrapper .nav-sections .active {
   padding-right: 2rem;
 }
 
-.main-container #about .about-main .skills-description .skills-list-col .col .skill img {
-  max-width: 64px;
-  max-height: 64px;
+.main-container #about .about-main .skills-description .skills-list-col .col .skill i {
+  font-size: 64px;
   display: inline-block;
 }
 
 @media (max-width: 730px) {
-  .main-container #about .about-main .skills-description .skills-list-col .col .skill img {
-    max-width: 50px;
-    max-height: 50px;
+  .main-container #about .about-main .skills-description .skills-list-col .col .skill i {
+    font-size: 50px;
   }
 }
 
