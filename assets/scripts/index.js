@@ -1,6 +1,8 @@
 var contactModalInstance;
 
 $(document).ready(function () {
+    setCopyrightYear();
+
     // initialize the contact me modal
     var contactModal = document.querySelector('#contact-modal');
     contactModalInstance = M.Modal.init(contactModal);
@@ -103,3 +105,8 @@ $('a[href^=mailto]').each(function () {
         }, 1000);
     });
 });
+
+function setCopyrightYear() {
+    var currentYear = new Date().getFullYear();
+    $('.year').html(currentYear);
+}
