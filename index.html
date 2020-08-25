@@ -35,9 +35,44 @@
 
     <!-- Local CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 
 <body>
+    <script>
+        function getInitialColorMode() {
+            const colorPreference = localStorage.getItem('mode');
+            const hasColorPreference = typeof colorPreference === 'string';
+
+            // Check if the user has explicitly chosen light or dark. 
+            // If not, this value will be null.
+            if (hasColorPreference) {
+                return colorPreference;
+            }
+
+            // If they haven't been explicit, let's check the media query
+            // mql -> media query list
+            const mql = window.matchMedia('(prefers-color-scheme: dark)');
+            const hasMediaQueryPreference = typeof mql.matches === 'boolean';
+            if (hasMediaQueryPreference) {
+                return mql.matches ? 'dark' : 'light';
+            }
+
+            // If browser/OS that doesn't support color themes, return 'light' as default.
+            return 'light';
+        }
+
+        function setInitialColorMode(mode) {
+            if (mode == "dark") {
+                document.documentElement.setAttribute("data-theme", "dark");
+            } else {
+                document.documentElement.setAttribute("data-theme", "light");
+            }
+        }
+
+        var mode = getInitialColorMode();
+        setInitialColorMode(mode);
+    </script>
     <!-- NAVBAR -->
     <div class="navbar-fixed">
         <nav>
@@ -45,9 +80,9 @@
                 <a class="brand-logo" onclick="scrollToSection('intro')">Andrew Lee</a>
                 <a href="#" data-target="nav-sections" class="nav-dropdown-trigger" id="nav-dropdown-trigger" aria-label="expand navigation bar"><i
                         class="material-icons hide-on-med-and-up">menu</i></a>
-                <ul class="right nav-sections">
+                <ul class="right">
                     <li>
-                        <i class="material-icons toggle-color-mode" onclick="updateColorPreference()">wb_sunny</i>
+                        <i class="material-icons toggle-color-mode" onclick="toggleColorMode()">wb_sunny</i>
                         <!-- <i class="material-icons">brightness_2</i> -->
 
                     </li>
@@ -327,7 +362,7 @@
                 <div class="modal-title" id="modal-title"></div>
                 <div class="modal-desc" id="modal-desc"></div>
                 <div class="modal-tech" id="modal-tech"></div>
-                <div class="moadl-btns">
+                <div class="modal-btns">
                     <button class="btn waves-effect wave-light" id="modal-github"><i class="fa fa-github"></i> Github</button>
                     <button class="btn waves-effect wave-light" id="modal-site"><i class="fa fa-link"></i> View Site</button>
                 </div>
@@ -348,10 +383,10 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
     <!-- Local Javscript -->
-    <script src="assets/scripts/index.js"></script>
     <script src="assets/scripts/projects.js"></script>
     <script src="assets/scripts/animations.js"></script>
     <script src="assets/scripts/dark.js"></script>
+    <script src="assets/scripts/index.js"></script>
 </body>
 
 </html>
