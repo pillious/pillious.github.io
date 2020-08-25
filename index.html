@@ -35,9 +35,44 @@
 
     <!-- Local CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 
 <body>
+    <script>
+        function getInitialColorMode() {
+            const colorPreference = localStorage.getItem('mode');
+            const hasColorPreference = typeof colorPreference === 'string';
+
+            // Check if the user has explicitly chosen light or dark. 
+            // If not, this value will be null.
+            if (hasColorPreference) {
+                return colorPreference;
+            }
+
+            // If they haven't been explicit, let's check the media query
+            // mql -> media query list
+            const mql = window.matchMedia('(prefers-color-scheme: dark)');
+            const hasMediaQueryPreference = typeof mql.matches === 'boolean';
+            if (hasMediaQueryPreference) {
+                return mql.matches ? 'dark' : 'light';
+            }
+
+            // If browser/OS that doesn't support color themes, return 'light' as default.
+            return 'light';
+        }
+
+        function setInitialColorMode(mode) {
+            if (mode == "dark") {
+                document.documentElement.setAttribute("data-theme", "dark");
+            } else {
+                document.documentElement.setAttribute("data-theme", "light");
+            }
+        }
+
+        var mode = getInitialColorMode();
+        setInitialColorMode(mode);
+    </script>
     <!-- NAVBAR -->
     <div class="navbar-fixed">
         <nav>
@@ -45,6 +80,12 @@
                 <a class="brand-logo" onclick="scrollToSection('intro')">Andrew Lee</a>
                 <a href="#" data-target="nav-sections" class="nav-dropdown-trigger" id="nav-dropdown-trigger" aria-label="expand navigation bar"><i
                         class="material-icons hide-on-med-and-up">menu</i></a>
+                <ul class="right">
+                    <li class="color-modes-container" onclick="toggleColorMode()">
+                        <i class="material-icons light-mode-icon">wb_sunny</i>
+                        <i class="material-icons dark-mode-icon">brightness_2</i>
+                    </li>
+                </ul>
                 <ul class="right nav-sections nav-dropdown slideup" id="nav-sections">
                     <li class="active">
                         <a href="#intro">Home</a>
@@ -76,86 +117,89 @@
             </div>
         </section>
 
-        <div class="container">
-            <!-- ABOUT -->
-            <section id="about">
-                <div class="about-header animate" data-animate="fadeIn 1s ease">
-                    <div class="about-title">About Me</div>
-                </div>
-                <div class="about-main">
-                    <div class="row">
-                        <div class="col s6 about-description animate" data-animate="slideFromLeft 1s ease-out">
-                            <div class="bio-wrapper">
-                                <div class="bio-title">Who am I?</div>
-                                <div class="bio-body">I'm a junior in highschool who has an intrest in programming. I spend my free time developing
-                                    various web applications and learning new technologies.</div>
-                            </div>
-                            <div class="current-wrapper">
-                                <div class="current-title">What am I up to now?</div>
-                                <div class="current-body">I am currently taking a great course on data science. It covers statistical
-                                    mathematics, statistics in Python, and machine/deep learning.</div>
-                            </div>
-                        </div>
-                        <div class="col s6 skills-description animate" data-animate="slideFromRight 1s ease-out">
-                            <div class="skills-title">
-                                Recent Technologies
-                            </div>
-                            <div class="row skills-list-col">
-                                <div class="col s3">
-                                    <div class="skill">
-                                        <i class="devicon-html5-plain colored"></i>
-                                        <div>HTML</div>
-                                    </div>
+        <div class="about-wrapper">
+            <div class="container">
+                <!-- ABOUT -->
+                <section id="about">
+                    <div class="about-header animate" data-animate="fadeIn 1s ease">
+                        <div class="about-title">About Me</div>
+                    </div>
+                    <div class="about-main">
+                        <div class="row">
+                            <div class="col s6 about-description animate" data-animate="slideFromLeft 1s ease-out">
+                                <div class="bio-wrapper">
+                                    <div class="bio-title">Who am I?</div>
+                                    <div class="bio-body">I'm a junior in highschool who has an intrest in programming. I spend my free time
+                                        developing
+                                        various web applications and learning new technologies.</div>
                                 </div>
-                                <div class="col s3">
-                                    <div class="skill">
-                                        <i class="devicon-javascript-plain colored"></i>
-                                        <div>Javascript</div>
-                                    </div>
-                                </div>
-                                <div class="col s3">
-                                    <div class="skill">
-                                        <i class="devicon-css3-plain colored"></i>
-                                        <div>(S)CSS</div>
-                                    </div>
-                                </div>
-                                <div class="col s3">
-                                    <div class="skill">
-                                        <i class="devicon-bootstrap-plain colored"></i>
-                                        <div>Bootstrap</div>
-                                    </div>
+                                <div class="current-wrapper">
+                                    <div class="current-title">What am I up to now?</div>
+                                    <div class="current-body">I am currently taking a great course on data science. It covers statistical
+                                        mathematics, statistics in Python, and machine/deep learning.</div>
                                 </div>
                             </div>
-                            <div class="row skills-list-col">
-                                <div class="col s3">
-                                    <div class="skill">
-                                        <i class="devicon-nodejs-plain colored"></i>
-                                        <div>Node.js</div>
+                            <div class="col s6 skills-description animate" data-animate="slideFromRight 1s ease-out">
+                                <div class="skills-title">
+                                    Recent Technologies
+                                </div>
+                                <div class="row skills-list-col">
+                                    <div class="col s3">
+                                        <div class="skill">
+                                            <i class="devicon-html5-plain colored"></i>
+                                            <div>HTML</div>
+                                        </div>
+                                    </div>
+                                    <div class="col s3">
+                                        <div class="skill">
+                                            <i class="devicon-javascript-plain colored"></i>
+                                            <div>Javascript</div>
+                                        </div>
+                                    </div>
+                                    <div class="col s3">
+                                        <div class="skill">
+                                            <i class="devicon-css3-plain colored"></i>
+                                            <div>(S)CSS</div>
+                                        </div>
+                                    </div>
+                                    <div class="col s3">
+                                        <div class="skill">
+                                            <i class="devicon-bootstrap-plain colored"></i>
+                                            <div>Bootstrap</div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col s3">
-                                    <div class="skill">
-                                        <i class="devicon-mongodb-plain colored"></i>
-                                        <div>MongoDB</div>
+                                <div class="row skills-list-col">
+                                    <div class="col s3">
+                                        <div class="skill">
+                                            <i class="devicon-nodejs-plain colored"></i>
+                                            <div>Node.js</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col s3">
-                                    <div class="skill">
-                                        <i class="devicon-heroku-original colored"></i>
-                                        <div>Heroku</div>
+                                    <div class="col s3">
+                                        <div class="skill">
+                                            <i class="devicon-mongodb-plain colored"></i>
+                                            <div>MongoDB</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col s3">
-                                    <div class="skill">
-                                        <i class="devicon-git-plain colored"></i>
-                                        <div>Git/Github</div>
+                                    <div class="col s3">
+                                        <div class="skill">
+                                            <i class="devicon-heroku-original colored"></i>
+                                            <div>Heroku</div>
+                                        </div>
+                                    </div>
+                                    <div class="col s3">
+                                        <div class="skill">
+                                            <i class="devicon-git-plain colored"></i>
+                                            <div>Git/Github</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
         </div>
 
         <!-- PROJECTS -->
@@ -317,7 +361,7 @@
                 <div class="modal-title" id="modal-title"></div>
                 <div class="modal-desc" id="modal-desc"></div>
                 <div class="modal-tech" id="modal-tech"></div>
-                <div class="moadl-btns">
+                <div class="modal-btns">
                     <button class="btn waves-effect wave-light" id="modal-github"><i class="fa fa-github"></i> Github</button>
                     <button class="btn waves-effect wave-light" id="modal-site"><i class="fa fa-link"></i> View Site</button>
                 </div>
@@ -338,9 +382,10 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
     <!-- Local Javscript -->
-    <script src="assets/scripts/index.js"></script>
     <script src="assets/scripts/projects.js"></script>
     <script src="assets/scripts/animations.js"></script>
+    <script src="assets/scripts/dark.js"></script>
+    <script src="assets/scripts/index.js"></script>
 </body>
 
 </html>

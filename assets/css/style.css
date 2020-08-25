@@ -204,6 +204,7 @@ nav .nav-wrapper .brand-logo {
   max-height: 64px;
   overflow: hidden;
   cursor: pointer;
+  color: rgba(255, 255, 255, 0.87);
 }
 
 @media (max-width: 600px) {
@@ -222,18 +223,38 @@ nav .nav-wrapper .brand-logo {
   }
 }
 
-nav .nav-wrapper .nav-sections li {
+nav .nav-wrapper ul.right .color-modes-container {
+  cursor: pointer;
+  margin-bottom: -3px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+nav .nav-wrapper ul.right .color-modes-container .light-mode-icon {
+  display: block;
+  color: #f9d71c;
+}
+
+nav .nav-wrapper ul.right .color-modes-container .dark-mode-icon {
+  display: none;
+  color: #c5c5c5;
+}
+
+nav .nav-wrapper ul.right li {
   padding: 0 0.5rem;
 }
 
-nav .nav-wrapper .nav-sections li a {
+nav .nav-wrapper ul.right li a {
   cursor: pointer;
+  color: rgba(255, 255, 255, 0.87);
   text-transform: uppercase;
   margin-bottom: -3px;
   width: 100%;
 }
 
-nav .nav-wrapper .nav-sections .active {
+nav .nav-wrapper ul.right .active {
   border-bottom: solid 3px #40c4ff;
 }
 
@@ -288,7 +309,7 @@ nav .nav-wrapper .nav-sections .active {
 
 .main-container #intro .intro-statement {
   font-size: 2.5rem;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.87);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -302,7 +323,8 @@ nav .nav-wrapper .nav-sections .active {
 .main-container #intro .intro-statement .to-projects {
   margin-top: 2rem;
   background: transparent;
-  border: 1px solid #fff;
+  border: 1px solid rgba(255, 255, 255, 0.87);
+  color: rgba(255, 255, 255, 0.87);
   text-transform: capitalize;
   font-size: 1.5rem;
   border-radius: 0;
@@ -740,6 +762,7 @@ nav .nav-wrapper .nav-sections .active {
 
 .main-container #projects .container .feature .feature-project .project-row .feature-img-wrapper .feature-img-container .overlay .feature-caption .feature-center .feature-btn button {
   visibility: hidden;
+  background-color: #03dac5;
 }
 
 .main-container #projects .container .feature .feature-project .project-row .feature-img-wrapper .feature-img-container .overlay .feature-caption .feature-center .feature-btn button i {
@@ -922,6 +945,7 @@ nav .nav-wrapper .nav-sections .active {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  width: 100%;
 }
 
 #project-modal .modal-content .modal-caption {
@@ -961,11 +985,15 @@ nav .nav-wrapper .nav-sections .active {
   padding-bottom: 1rem;
 }
 
+#project-modal .modal-content .modal-caption .modal-btns button {
+  margin-top: 5px;
+}
+
 #project-modal .modal-content .modal-caption .modal-btns button i {
   font-size: 1.5rem;
   color: #fff;
-  -webkit-transform: translateY(3px);
-          transform: translateY(3px);
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
 }
 
 #project-modal .modal-footer .modal-close {
@@ -974,5 +1002,80 @@ nav .nav-wrapper .nav-sections .active {
 
 #project-modal .modal-footer .fa-times {
   font-size: 2rem;
+}
+
+/*
+DARK MODE STYLES
+
+dark mode tips:
+https://material.io/design/color/dark-theme.html#ui-application
+https://uxplanet.org/8-tips-for-dark-theme-design-8dfc2f8f7ab6
+*/
+[data-theme="dark"] nav .nav-wrapper ul.right .color-modes-container .light-mode-icon {
+  display: none;
+}
+
+[data-theme="dark"] nav .nav-wrapper ul.right .color-modes-container .dark-mode-icon {
+  display: block;
+}
+
+[data-theme="dark"] .about-wrapper {
+  background-color: #202a2f;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+[data-theme="dark"] .about-wrapper .bio-body {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+[data-theme="dark"] .about-wrapper .current-body {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+[data-theme="dark"] .about-wrapper .skill {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+[data-theme="dark"] #projects {
+  background-color: #1e272c;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+[data-theme="dark"] #projects .feature-img {
+  -webkit-filter: grayscale(0.5);
+          filter: grayscale(0.5);
+}
+
+[data-theme="dark"] #project-modal {
+  background-color: #202a2f;
+}
+
+[data-theme="dark"] #project-modal .modal-content .modal-img-wrapper .modal-img {
+  -webkit-filter: grayscale(0.5);
+          filter: grayscale(0.5);
+}
+
+[data-theme="dark"] #project-modal .modal-content .modal-title {
+  color: rgba(255, 255, 255, 0.87);
+}
+
+[data-theme="dark"] #project-modal .modal-content .modal-desc {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+[data-theme="dark"] #project-modal .modal-content .modal-tech span {
+  color: #bb86fc;
+}
+
+[data-theme="dark"] #project-modal .modal-content .modal-btns button {
+  background-color: #03dac5;
+}
+
+[data-theme="dark"] #project-modal .modal-footer {
+  background-color: #202a2f;
+}
+
+[data-theme="dark"] #project-modal .modal-footer .modal-close {
+  color: #db1b4f;
 }
 /*# sourceMappingURL=style.css.map */
