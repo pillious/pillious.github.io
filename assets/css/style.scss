@@ -477,8 +477,12 @@ nav {
         min-height: 100vh;
         padding: 0 10% 10% 10%;
 
+        @media (max-width: 1380px) {
+            height: calc(250px + (275px * 3));
+        }
+
         @media (max-width: 750px) {
-            height: calc(150px + (275px * 6));
+            height: calc(250px + (275px * 6));
         }
 
 
@@ -881,45 +885,49 @@ https://material.io/design/color/dark-theme.html#ui-application
 https://uxplanet.org/8-tips-for-dark-theme-design-8dfc2f8f7ab6
 */
 [data-theme="dark"] {
-    nav {
-        .nav-wrapper {
-            ul.right {
-                .color-modes-container {
-                    .light-mode-icon {
-                        display: none;
-                    }
+    .main-container {
+        background-color: #202a2f;
 
-                    .dark-mode-icon {
-                        display: block;
+        nav {
+            .nav-wrapper {
+                ul.right {
+                    .color-modes-container {
+                        .light-mode-icon {
+                            display: none;
+                        }
+
+                        .dark-mode-icon {
+                            display: block;
+                        }
                     }
                 }
             }
         }
-    }
 
-    .about-wrapper {
-        background-color: #202a2f;
-        color: color(high-emphasis);
+        .about-wrapper {
+            background-color: #202a2f;
+            color: color(high-emphasis);
 
-        .bio-body {
-            color: color(medium-emphasis);
+            .bio-body {
+                color: color(medium-emphasis);
+            }
+
+            .current-body {
+                color: color(medium-emphasis);
+            }
+
+            .skill {
+                color: color(medium-emphasis)
+            }
         }
 
-        .current-body {
-            color: color(medium-emphasis);
-        }
+        #projects {
+            background-color: #1e272c;
+            color: rgba(255, 255, 255, .87);
 
-        .skill {
-            color: color(medium-emphasis)
-        }
-    }
-
-    #projects {
-        background-color: #1e272c;
-        color: rgba(255, 255, 255, .87);
-
-        .feature-img {
-            filter: grayscale(.5);
+            .feature-img {
+                filter: grayscale(.5);
+            }
         }
     }
 

@@ -560,9 +560,15 @@ nav .nav-wrapper ul.right .active {
   padding: 0 10% 10% 10%;
 }
 
+@media (max-width: 1380px) {
+  .main-container #projects {
+    height: calc(250px + (275px * 3));
+  }
+}
+
 @media (max-width: 750px) {
   .main-container #projects {
-    height: calc(150px + (275px * 6));
+    height: calc(250px + (275px * 6));
   }
 }
 
@@ -1011,37 +1017,41 @@ dark mode tips:
 https://material.io/design/color/dark-theme.html#ui-application
 https://uxplanet.org/8-tips-for-dark-theme-design-8dfc2f8f7ab6
 */
-[data-theme="dark"] nav .nav-wrapper ul.right .color-modes-container .light-mode-icon {
+[data-theme="dark"] .main-container {
+  background-color: #202a2f;
+}
+
+[data-theme="dark"] .main-container nav .nav-wrapper ul.right .color-modes-container .light-mode-icon {
   display: none;
 }
 
-[data-theme="dark"] nav .nav-wrapper ul.right .color-modes-container .dark-mode-icon {
+[data-theme="dark"] .main-container nav .nav-wrapper ul.right .color-modes-container .dark-mode-icon {
   display: block;
 }
 
-[data-theme="dark"] .about-wrapper {
+[data-theme="dark"] .main-container .about-wrapper {
   background-color: #202a2f;
   color: rgba(255, 255, 255, 0.87);
 }
 
-[data-theme="dark"] .about-wrapper .bio-body {
+[data-theme="dark"] .main-container .about-wrapper .bio-body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-[data-theme="dark"] .about-wrapper .current-body {
+[data-theme="dark"] .main-container .about-wrapper .current-body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-[data-theme="dark"] .about-wrapper .skill {
+[data-theme="dark"] .main-container .about-wrapper .skill {
   color: rgba(255, 255, 255, 0.6);
 }
 
-[data-theme="dark"] #projects {
+[data-theme="dark"] .main-container #projects {
   background-color: #1e272c;
   color: rgba(255, 255, 255, 0.87);
 }
 
-[data-theme="dark"] #projects .feature-img {
+[data-theme="dark"] .main-container #projects .feature-img {
   -webkit-filter: grayscale(0.5);
           filter: grayscale(0.5);
 }
