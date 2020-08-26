@@ -151,7 +151,7 @@ nav {
     .nav-wrapper {
         margin: 0 5rem;
 
-        @media (min-width: 601px) and (max-width: 675px) {
+        @media (min-width: 601px) and (max-width: 760px) {
             margin: 0 0.1rem;
         }
 
@@ -166,6 +166,7 @@ nav {
             overflow: hidden;
             cursor: pointer;
             color: color(high-emphasis);
+            display: flex;
 
             @include for-mobile-only {
                 left: 50%;
@@ -176,13 +177,16 @@ nav {
                 transform: translateX(0);
                 left: 0;
             }
-        }
 
-        ul.right {
             .color-modes-container {
                 cursor: pointer;
                 margin-bottom: -3px;
                 user-select: none;
+                margin-left: 15px;
+
+                @media (min-width: 601px) and (max-width: 760px) {
+                    margin-left: 10px;
+                }
 
                 .light-mode-icon {
                     display: block;
@@ -194,6 +198,24 @@ nav {
                     color: #c5c5c5
                 }
             }
+        }
+
+        ul {
+            // .color-modes-container {
+            //     cursor: pointer;
+            //     margin-bottom: -3px;
+            //     user-select: none;
+
+            //     .light-mode-icon {
+            //         display: block;
+            //         color: #f9d71c;
+            //     }
+
+            //     .dark-mode-icon {
+            //         display: none;
+            //         color: #c5c5c5
+            //     }
+            // }
 
             li {
                 padding: 0 0.5rem;
@@ -477,8 +499,12 @@ nav {
         min-height: 100vh;
         padding: 0 10% 10% 10%;
 
+        @media (max-width: 1380px) {
+            height: calc(250px + (275px * 3));
+        }
+
         @media (max-width: 750px) {
-            height: calc(150px + (275px * 6));
+            height: calc(250px + (275px * 6));
         }
 
 
@@ -883,7 +909,19 @@ https://uxplanet.org/8-tips-for-dark-theme-design-8dfc2f8f7ab6
 [data-theme="dark"] {
     nav {
         .nav-wrapper {
-            ul.right {
+            // ul {
+            //     .color-modes-container {
+            //         .light-mode-icon {
+            //             display: none;
+            //         }
+
+            //         .dark-mode-icon {
+            //             display: block;
+            //         }
+            //     }
+            // }
+
+            .brand-logo {
                 .color-modes-container {
                     .light-mode-icon {
                         display: none;
@@ -897,29 +935,33 @@ https://uxplanet.org/8-tips-for-dark-theme-design-8dfc2f8f7ab6
         }
     }
 
-    .about-wrapper {
+    .main-container {
         background-color: #202a2f;
-        color: color(high-emphasis);
 
-        .bio-body {
-            color: color(medium-emphasis);
+        .about-wrapper {
+            background-color: #202a2f;
+            color: color(high-emphasis);
+
+            .bio-body {
+                color: color(medium-emphasis);
+            }
+
+            .current-body {
+                color: color(medium-emphasis);
+            }
+
+            .skill {
+                color: color(medium-emphasis)
+            }
         }
 
-        .current-body {
-            color: color(medium-emphasis);
-        }
+        #projects {
+            background-color: #1e272c;
+            color: rgba(255, 255, 255, .87);
 
-        .skill {
-            color: color(medium-emphasis)
-        }
-    }
-
-    #projects {
-        background-color: #1e272c;
-        color: rgba(255, 255, 255, .87);
-
-        .feature-img {
-            filter: grayscale(.5);
+            .feature-img {
+                filter: grayscale(.5);
+            }
         }
     }
 

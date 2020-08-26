@@ -77,15 +77,23 @@
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper">
-                <a class="brand-logo" onclick="scrollToSection('intro')">Andrew Lee</a>
-                <a href="#" data-target="nav-sections" class="nav-dropdown-trigger" id="nav-dropdown-trigger" aria-label="expand navigation bar"><i
-                        class="material-icons hide-on-med-and-up">menu</i></a>
-                <ul class="right">
+                <div class="brand-logo">
+                    <a  onclick="scrollToSection('intro')">Andrew Lee</a>
+                    <div class="color-modes-container right" onclick="toggleColorMode()">
+                        <i class="material-icons light-mode-icon">wb_sunny</i>
+                        <i class="material-icons dark-mode-icon">brightness_2</i>
+                    </div>
+                </div>
+
+
+                <!-- <ul class="right">
                     <li class="color-modes-container" onclick="toggleColorMode()">
                         <i class="material-icons light-mode-icon">wb_sunny</i>
                         <i class="material-icons dark-mode-icon">brightness_2</i>
                     </li>
-                </ul>
+                </ul> -->
+                <a href="#" data-target="nav-sections" class="nav-dropdown-trigger" id="nav-dropdown-trigger" aria-label="expand navigation bar"><i
+                        class="material-icons hide-on-med-and-up">menu</i></a>
                 <ul class="right nav-sections nav-dropdown slideup" id="nav-sections">
                     <li class="active">
                         <a href="#intro">Home</a>
