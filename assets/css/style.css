@@ -186,7 +186,7 @@ nav .nav-wrapper {
   margin: 0 5rem;
 }
 
-@media (min-width: 601px) and (max-width: 675px) {
+@media (min-width: 601px) and (max-width: 760px) {
   nav .nav-wrapper {
     margin: 0 0.1rem;
   }
@@ -205,6 +205,9 @@ nav .nav-wrapper .brand-logo {
   overflow: hidden;
   cursor: pointer;
   color: rgba(255, 255, 255, 0.87);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media (max-width: 600px) {
@@ -223,30 +226,37 @@ nav .nav-wrapper .brand-logo {
   }
 }
 
-nav .nav-wrapper ul.right .color-modes-container {
+nav .nav-wrapper .brand-logo .color-modes-container {
   cursor: pointer;
   margin-bottom: -3px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  margin-left: 15px;
 }
 
-nav .nav-wrapper ul.right .color-modes-container .light-mode-icon {
+@media (min-width: 601px) and (max-width: 760px) {
+  nav .nav-wrapper .brand-logo .color-modes-container {
+    margin-left: 10px;
+  }
+}
+
+nav .nav-wrapper .brand-logo .color-modes-container .light-mode-icon {
   display: block;
   color: #f9d71c;
 }
 
-nav .nav-wrapper ul.right .color-modes-container .dark-mode-icon {
+nav .nav-wrapper .brand-logo .color-modes-container .dark-mode-icon {
   display: none;
   color: #c5c5c5;
 }
 
-nav .nav-wrapper ul.right li {
+nav .nav-wrapper ul li {
   padding: 0 0.5rem;
 }
 
-nav .nav-wrapper ul.right li a {
+nav .nav-wrapper ul li a {
   cursor: pointer;
   color: rgba(255, 255, 255, 0.87);
   text-transform: uppercase;
@@ -254,7 +264,7 @@ nav .nav-wrapper ul.right li a {
   width: 100%;
 }
 
-nav .nav-wrapper ul.right .active {
+nav .nav-wrapper ul .active {
   border-bottom: solid 3px #40c4ff;
 }
 
@@ -1017,16 +1027,16 @@ dark mode tips:
 https://material.io/design/color/dark-theme.html#ui-application
 https://uxplanet.org/8-tips-for-dark-theme-design-8dfc2f8f7ab6
 */
-[data-theme="dark"] .main-container {
-  background-color: #202a2f;
-}
-
-[data-theme="dark"] .main-container nav .nav-wrapper ul.right .color-modes-container .light-mode-icon {
+[data-theme="dark"] nav .nav-wrapper .brand-logo .color-modes-container .light-mode-icon {
   display: none;
 }
 
-[data-theme="dark"] .main-container nav .nav-wrapper ul.right .color-modes-container .dark-mode-icon {
+[data-theme="dark"] nav .nav-wrapper .brand-logo .color-modes-container .dark-mode-icon {
   display: block;
+}
+
+[data-theme="dark"] .main-container {
+  background-color: #202a2f;
 }
 
 [data-theme="dark"] .main-container .about-wrapper {
