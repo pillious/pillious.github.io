@@ -6,7 +6,7 @@ const projects = [{
         tech: ['Node.js', 'Ejs', 'MongoDB', 'Bootstrap', 'SendGrid'],
         img: 'assets/img/projects/feature-1.png',
         github: '',
-        site: 'https://acaply.com/'
+        site: 'https://acaply.humpillious.now.sh/'
     },
     {
         name: 'Covid-19 API',
