@@ -1,3 +1,3 @@
-Andrew Lee's Personal Website
+My Personal Website
 
 Explore my website: https://andrewzh.com
