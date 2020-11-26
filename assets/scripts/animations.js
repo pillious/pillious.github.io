@@ -79,7 +79,7 @@ function animateBackground() {
     });
 }
 
-// initialize the animations & only run animationwhen element is in view.
+// initialize the animations & only run animation when element is in view.
 function animateElements() {
     var offset = $(window).height() / 1.6;
 
@@ -92,7 +92,6 @@ function animateElements() {
                 '-webkit-animation': elem.data('animate'),
                 '-moz-animation': elem.data('animate'),
                 'animation': elem.data('animate'),
-                opacity: 1
             });
         }, {
             triggerOnce: true,

@@ -78,7 +78,7 @@
         <nav>
             <div class="nav-wrapper">
                 <div class="brand-logo">
-                    <a  onclick="scrollToSection('intro')">Andrew Lee</a>
+                    <a onclick="scrollToSection('intro')">Andrew Lee</a>
                     <div class="color-modes-container right" onclick="toggleColorMode()">
                         <i class="material-icons light-mode-icon">wb_sunny</i>
                         <i class="material-icons dark-mode-icon">brightness_2</i>
@@ -117,9 +117,9 @@
         <section id="intro" class="z-depth-1">
             <div id="intro-background"></div>
             <div class="intro-statement">
-                <div class="animate" data-animate="slideFromTop 0.9s ease-out">Hello, I'm <span class="intro-name">Andrew Lee.</span></div>
-                <div class="animate" data-animate="slideFromTop 0.85s ease-out">I'm a programming enthusiast.</div>
-                <button class="to-projects btn-large animate" data-animate="slideFromTop 0.7s ease-out" onclick="scrollToSection('about')">
+                <div class="animate" data-animate="slideFromTop 0.9s ease-out 0s forwards">Hello, I'm <span class="intro-name">Andrew Lee.</span></div>
+                <div class="animate" data-animate="slideFromTop 0.85s ease-out 0s forwards">I'm a programming enthusiast.</div>
+                <button class="to-projects btn-large animate" data-animate="slideFromTop 0.7s ease-out 0s forwards" onclick="scrollToSection('about')">
                     <div>Explore <span class="material-icons">arrow_forward</span></div>
                 </button>
             </div>
@@ -129,80 +129,87 @@
             <div class="container">
                 <!-- ABOUT -->
                 <section id="about">
-                    <div class="about-header animate" data-animate="fadeIn 1s ease">
+                    <div class="about-header animate" data-animate="fadeIn 1s ease 0s forwards" data-offset="75%">
                         <div class="about-title">About Me</div>
                     </div>
                     <div class="about-main">
                         <div class="row">
-                            <div class="col s6 about-description animate" data-animate="slideFromLeft 1s ease-out">
+
+
+                            <div class="col about-description animate" data-animate="slideFromLeft 1s ease-out 0s forwards" data-offset="80%">
                                 <div class="bio-wrapper">
                                     <div class="bio-title">Who am I?</div>
-                                    <div class="bio-body">I'm a junior in highschool who has an intrest in programming. I spend my free time
-                                        developing
-                                        various web applications and learning new technologies.</div>
-                                </div>
-                                <div class="current-wrapper">
-                                    <div class="current-title">What am I up to now?</div>
-                                    <div class="current-body">I am currently taking a great course on data science. It covers statistical
-                                        mathematics, statistics in Python, and machine/deep learning.</div>
+                                    <div class="bio-body">I'm a senior in highschool who spends his free time developing web applications, machine
+                                        learning models, and learning new technologies.</div>
                                 </div>
                             </div>
-                            <div class="col s6 skills-description animate" data-animate="slideFromRight 1s ease-out">
-                                <div class="skills-title">
+                            <div class="col about-description animate" data-animate="slideFromRight 1s ease-out 0s forwards" data-offset="85%">
+                                <div class="current-wrapper">
+                                    <div class="current-title">What am I up to now?</div>
+                                    <div class="current-body">I am currently taking a great course on data science in Python.</div>
+                                </div>
+                            </div>
+
+                            <div class="col skills-description">
+                                <div class="skills-title animate" data-animate="fadeIn 1s ease 0s forwards">
                                     Recent Technologies
                                 </div>
-                                <div class="row skills-list-col">
-                                    <div class="col s3">
-                                        <div class="skill">
-                                            <i class="devicon-html5-plain colored"></i>
-                                            <div>HTML</div>
+
+                                <div>
+                                    <div class="row skills-list-col">
+                                        <div class="col s3 animate" data-animate="fadeIn 1s ease 0s forwards" data-offset="90%">
+                                            <div class="skill">
+                                                <i class="devicon-html5-plain colored"></i>
+                                                <div>HTML</div>
+                                            </div>
+                                        </div>
+                                        <div class="col s3 animate" data-animate="fadeIn 1s ease 0.1s forwards" data-offset="90%">
+                                            <div class="skill">
+                                                <i class="devicon-javascript-plain colored"></i>
+                                                <div>Javascript</div>
+                                            </div>
+                                        </div>
+                                        <div class="col s3 animate" data-animate="fadeIn 1s ease 0.2s forwards" data-offset="90%">
+                                            <div class="skill">
+                                                <i class="devicon-css3-plain colored"></i>
+                                                <div>(S)CSS</div>
+                                            </div>
+                                        </div>
+                                        <div class="col s3 animate" data-animate="fadeIn 1s ease 0.3s forwards" data-offset="90%">
+                                            <div class="skill">
+                                                <i class="devicon-bootstrap-plain colored"></i>
+                                                <div>Bootstrap</div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col s3">
-                                        <div class="skill">
-                                            <i class="devicon-javascript-plain colored"></i>
-                                            <div>Javascript</div>
+                                    <div class="row skills-list-col">
+                                        <div class="col s3 animate" data-animate="fadeIn 1s ease 0.3s forwards" data-offset="95%">
+                                            <div class="skill">
+                                                <i class="devicon-nodejs-plain colored"></i>
+                                                <div>Node.js</div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col s3">
-                                        <div class="skill">
-                                            <i class="devicon-css3-plain colored"></i>
-                                            <div>(S)CSS</div>
+                                        <div class="col s3 animate" data-animate="fadeIn 1s ease 0.2s forwards" data-offset="95%">
+                                            <div class="skill">
+                                                <i class="devicon-mongodb-plain colored"></i>
+                                                <div>MongoDB</div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col s3">
-                                        <div class="skill">
-                                            <i class="devicon-bootstrap-plain colored"></i>
-                                            <div>Bootstrap</div>
+                                        <div class="col s3 animate" data-animate="fadeIn 1s ease 0.1s forwards" data-offset="95%">
+                                            <div class="skill">
+                                                <i class="devicon-heroku-original colored"></i>
+                                                <div>Heroku</div>
+                                            </div>
+                                        </div>
+                                        <div class="col s3 animate" data-animate="fadeIn 1s ease 0s forwards" data-offset="95%">
+                                            <div class="skill">
+                                                <i class="devicon-git-plain colored"></i>
+                                                <div>Git/Github</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row skills-list-col">
-                                    <div class="col s3">
-                                        <div class="skill">
-                                            <i class="devicon-nodejs-plain colored"></i>
-                                            <div>Node.js</div>
-                                        </div>
-                                    </div>
-                                    <div class="col s3">
-                                        <div class="skill">
-                                            <i class="devicon-mongodb-plain colored"></i>
-                                            <div>MongoDB</div>
-                                        </div>
-                                    </div>
-                                    <div class="col s3">
-                                        <div class="skill">
-                                            <i class="devicon-heroku-original colored"></i>
-                                            <div>Heroku</div>
-                                        </div>
-                                    </div>
-                                    <div class="col s3">
-                                        <div class="skill">
-                                            <i class="devicon-git-plain colored"></i>
-                                            <div>Git/Github</div>
-                                        </div>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -213,13 +220,13 @@
         <!-- PROJECTS -->
         <section id="projects">
             <div class="container">
-                <div class="projects-header animate" data-animate="fadeIn 1s ease">
+                <div class="projects-header animate" data-animate="fadeIn 1s ease 0s forwards">
                     <div>Projects</div>
                 </div>
                 <div class="feature">
-                    <div class="feature-project animate" data-animate="0.5 slideFromBottom">
+                    <div class="feature-project animate" data-animate="slideFromBottom 0.5s ease 0s forwards">
                         <div class="project-row">
-                            <div class="feature-img-wrapper animate" data-animate="0.5s slideFromBottom">
+                            <div class="feature-img-wrapper animate" data-animate="slideFromBottom 0.5s ease 0s forwards">
                                 <div class="feature-img-container">
                                     <img class="feature-img responsive-img" alt="">
                                     <div class="overlay">
@@ -236,7 +243,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="feature-img-wrapper animate" data-animate="0.5s slideFromBottom">
+                            <div class="feature-img-wrapper animate" data-animate="slideFromBottom 0.5s ease 0s forwards">
                                 <div class="feature-img-container">
                                     <img class="feature-img responsive-img" alt="">
                                     <div class="overlay">
@@ -253,7 +260,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="feature-img-wrapper animate" data-animate="0.5s slideFromBottom" data-offset="70%">
+                            <div class="feature-img-wrapper animate" data-animate="slideFromBottom 0.5s ease 0s forwards" data-offset="70%">
                                 <div class="feature-img-container">
                                     <img class="feature-img responsive-img" alt="">
                                     <div class="overlay">
@@ -270,7 +277,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="feature-img-wrapper animate" data-animate="0.5s slideFromBottom" data-offset="70%">
+                            <div class="feature-img-wrapper animate" data-animate="slideFromBottom 0.5s ease 0s forwards" data-offset="70%">
                                 <div class="feature-img-container">
                                     <img class="feature-img responsive-img" alt="">
                                     <div class="overlay">
@@ -287,7 +294,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="feature-img-wrapper animate" data-animate="0.5s slideFromBottom" data-offset="80%">
+                            <div class="feature-img-wrapper animate" data-animate="slideFromBottom 0.5s ease 0s forwards" data-offset="80%">
                                 <div class="feature-img-container">
                                     <img class="feature-img responsive-img" alt="">
                                     <div class="overlay">
@@ -304,7 +311,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="feature-img-wrapper animate" data-animate="0.5s slideFromBottom" data-offset="80%">
+                            <div class="feature-img-wrapper animate" data-animate="slideFromBottom 0.5s ease 0s forwards" data-offset="80%">
                                 <div class="feature-img-container">
                                     <img class="feature-img responsive-img" alt="">
                                     <div class="overlay">
@@ -329,17 +336,17 @@
         <!-- FOOTER -->
         <section id="footer">
             <div class="contact">
-                <div class="contact-header animate" data-animate="fadeIn 1s ease">
+                <div class="contact-header animate" data-animate="fadeIn 1s ease 0s forwards">
                     <div>Contact Me</div>
                 </div>
                 <div class="container">
-                    <div class="contact-caption animate" data-animate="fadeIn 1s ease" data-offset="60%">
+                    <div class="contact-caption animate" data-animate="fadeIn 1s ease 0s forwards" data-offset="60%">
                         <span>Have a question or just want to say hi?</span> <br>
                         <span>Feel free to drop me a message!</span>
                     </div>
                     <div class="contact-email">
                         <a href="mailto:andrewzhlee@gmail.com" class="waves-effect waves-light btn-large tooltipped animate"
-                            data-animate="scaleIn 1.75s ease-out" data-offset="80%" data-position="top" data-tooltip="andrewzhlee@gmail.com">Get in
+                            data-animate="scaleIn 1.75s ease-out 0s forwards" data-offset="80%" data-position="top" data-tooltip="andrewzhlee@gmail.com">Get in
                             Touch</a>
                     </div>
                 </div>

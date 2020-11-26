@@ -389,30 +389,16 @@ nav {
 
         .about-main {
             font-size: 1.1rem;
+            max-width: 600px;
 
             .about-description {
                 padding-right: 1rem;
                 opacity: 0;
-
-                @include for-about-section-medium {
-                    display: flex;
-                    width: 100%;
-                    text-align: center;
-                }
-
-                @include for-about-section-small {
-                    display: block;
-                }
+                text-align: center;
+                width: 100%;
+                margin-bottom: 3rem;
 
                 .bio-wrapper {
-                    @include for-about-section-medium {
-                        margin-right: 1rem;
-                    }
-
-                    @include for-about-section-small {
-                        margin-right: 0;
-                        margin-bottom: 2rem;
-                    }
 
                     .bio-title {
                         font-weight: 600;
@@ -422,12 +408,6 @@ nav {
                 }
 
                 .current-wrapper {
-                    margin-top: 3rem;
-
-                    @include for-about-section-medium {
-                        margin: 0 0 3rem;
-                    }
-
                     .current-title {
                         font-weight: 600;
                         font-size: 1.5rem;
@@ -438,8 +418,9 @@ nav {
             }
 
             .skills-description {
-                padding-left: 1rem;
-                opacity: 0;
+                height: 100%;
+                width: 100%;
+                text-align: center;
 
                 @include for-about-section-medium {
                     width: 100%;
@@ -452,36 +433,38 @@ nav {
                     font-size: 1.5rem;
                     margin-bottom: 0.9rem;
                     white-space: nowrap;
+                    
                 }
 
-                .skills-list-col {
-                    padding: 0;
-                    text-align: left;
-
-                    @include for-about-section-small {
-                        font-size: 12.5px;
-                        padding: 0 1rem;
-
-                    }
-
-                    @media (min-width: 475px) and (max-width: 811px) {
-                        margin-left: 2rem;
-                    }
-
-                    .col {
+                div {
+                    .skills-list-col {
                         padding: 0;
+                        text-align: left;
 
-                        .skill {
-                            text-align: center;
-                            display: inline-block;
-                            padding-right: 2rem;
+                        @include for-about-section-small {
+                            font-size: 12.5px;
+                            padding: 0 1rem;
 
-                            i {
-                                font-size: 64px;
+                        }
+
+                        .col {
+                            padding: 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            opacity: 0;
+
+                            .skill {
+                                text-align: center;
                                 display: inline-block;
 
-                                @include for-about-section-small {
-                                    font-size: 50px;
+                                i {
+                                    font-size: 64px;
+                                    display: inline-block;
+
+                                    @include for-about-section-small {
+                                        font-size: 50px;
+                                    }
                                 }
                             }
                         }

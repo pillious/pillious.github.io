@@ -444,56 +444,21 @@ nav .nav-wrapper ul .active {
 
 .main-container #about .about-main {
   font-size: 1.1rem;
+  max-width: 600px;
 }
 
 .main-container #about .about-main .about-description {
   padding-right: 1rem;
   opacity: 0;
-}
-
-@media (max-width: 810px) {
-  .main-container #about .about-main .about-description {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    text-align: center;
-  }
-}
-
-@media (max-width: 730px) {
-  .main-container #about .about-main .about-description {
-    display: block;
-  }
-}
-
-@media (max-width: 810px) {
-  .main-container #about .about-main .about-description .bio-wrapper {
-    margin-right: 1rem;
-  }
-}
-
-@media (max-width: 730px) {
-  .main-container #about .about-main .about-description .bio-wrapper {
-    margin-right: 0;
-    margin-bottom: 2rem;
-  }
+  text-align: center;
+  width: 100%;
+  margin-bottom: 3rem;
 }
 
 .main-container #about .about-main .about-description .bio-wrapper .bio-title {
   font-weight: 600;
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-}
-
-.main-container #about .about-main .about-description .current-wrapper {
-  margin-top: 3rem;
-}
-
-@media (max-width: 810px) {
-  .main-container #about .about-main .about-description .current-wrapper {
-    margin: 0 0 3rem;
-  }
 }
 
 .main-container #about .about-main .about-description .current-wrapper .current-title {
@@ -504,8 +469,9 @@ nav .nav-wrapper ul .active {
 }
 
 .main-container #about .about-main .skills-description {
-  padding-left: 1rem;
-  opacity: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
 }
 
 @media (max-width: 810px) {
@@ -523,41 +489,44 @@ nav .nav-wrapper ul .active {
   white-space: nowrap;
 }
 
-.main-container #about .about-main .skills-description .skills-list-col {
+.main-container #about .about-main .skills-description div .skills-list-col {
   padding: 0;
   text-align: left;
 }
 
 @media (max-width: 730px) {
-  .main-container #about .about-main .skills-description .skills-list-col {
+  .main-container #about .about-main .skills-description div .skills-list-col {
     font-size: 12.5px;
     padding: 0 1rem;
   }
 }
 
-@media (min-width: 475px) and (max-width: 811px) {
-  .main-container #about .about-main .skills-description .skills-list-col {
-    margin-left: 2rem;
-  }
-}
-
-.main-container #about .about-main .skills-description .skills-list-col .col {
+.main-container #about .about-main .skills-description div .skills-list-col .col {
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
 }
 
-.main-container #about .about-main .skills-description .skills-list-col .col .skill {
+.main-container #about .about-main .skills-description div .skills-list-col .col .skill {
   text-align: center;
   display: inline-block;
-  padding-right: 2rem;
 }
 
-.main-container #about .about-main .skills-description .skills-list-col .col .skill i {
+.main-container #about .about-main .skills-description div .skills-list-col .col .skill i {
   font-size: 64px;
   display: inline-block;
 }
 
 @media (max-width: 730px) {
-  .main-container #about .about-main .skills-description .skills-list-col .col .skill i {
+  .main-container #about .about-main .skills-description div .skills-list-col .col .skill i {
     font-size: 50px;
   }
 }
