@@ -10,7 +10,7 @@ const projects = [{
     },
     {
         name: 'Covid-19 API',
-        desc: 'A REST API which provides daily, up to date data on the 2020 global Covid-19 pandemic. The data is retrieved from WHO&apos;s detailed reports.',
+        desc: 'A REST API which provides data on the Covid-19 pandemic. The data is retrieved from WHO&apos;s detailed reports.',
         tech: ['Node.js', 'MongoDB', 'Zeit'],
         img: 'assets/img/projects/feature-2.png',
         github: 'https://github.com/pillious/Covid-19-Api',
